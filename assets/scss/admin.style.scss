@@ -1,0 +1,29 @@
+.meal-number-meta, .meal-text-meta {
+  width: 80%;
+}
+
+.meal-number-meta {
+  &--quantity {
+    width: 60%;
+  }
+}
+
+.meal-text-meta {
+  &--unit {
+    width: 80px;
+  }
+}
+
+
+#meal-details-meta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .unit-label {
+    padding-left: 10px;
+  }
+}
+
+@import "admin_templates/order_details";
+@import "admin_templates/order_listing";

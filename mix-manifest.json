@@ -1,0 +1,11 @@
+{
+    "/assets/css/admin.style.min.css": "/assets/css/admin.style.min.css",
+    "/templates/emails/css.css": "/templates/emails/css.css",
+    "/assets/css/style.min.css": "/assets/css/style.min.css",
+    "/mix.js.map": "/mix.js.map",
+    "/assets/js/grid-gallery.min.js": "/assets/js/grid-gallery.min.js",
+    "/assets/js/add-to-cart.min.js": "/assets/js/add-to-cart.min.js",
+    "/assets/js/admin/order-detail.min.js": "/assets/js/admin/order-detail.min.js",
+    "/assets/css/simplePagination.css": "/assets/css/simplePagination.css",
+    "/assets/js/jquery.simplePagination.js": "/assets/js/jquery.simplePagination.js"
+}

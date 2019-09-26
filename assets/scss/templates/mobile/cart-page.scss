@@ -1,0 +1,35 @@
+#cart-content {
+  table {
+    tr {
+      th, td {
+        display: table-cell;
+        vertical-align:middle;
+      }
+
+      .product-remove {
+        max-width: 30px;
+      }
+
+      .product-thumbnail {
+        max-width: 80px;
+        img {
+          margin: auto;
+        }
+      }
+    }
+  }
+
+  .table-cart-totals {
+    .cart-subtotal, .cart-total {
+      &__title {
+        font-size: 1em;
+      }
+    }
+
+    .cart-total {
+      &__amount {
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "tweak-digital/food-to-prep",
+    "authors": [
+        {
+            "name": "Tweak Digital"
+        }
+    ],
+    "require": {
+        "pelago/emogrifier": "^2.2",
+        "paypal/rest-api-sdk-php": "*"
+    }
+}

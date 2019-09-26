@@ -1,0 +1,145 @@
+.meal-prep {
+    
+    //general
+    @import "templates/_variable";
+    @import "templates/general";
+    
+    //mobile
+    @import "templates/mobile/meal-list-page";
+    @import "templates/mobile/meal-detail-page";
+    @import "templates/mobile/cart-page";
+    @import "templates/mobile/checkout-page";
+    
+    @import "templates/mobile/template_parts/grid-gallery";
+    @import "templates/mobile/template_parts/navigation-category";
+    
+    
+    //tablet
+    @media (min-width: 768px) and (max-width: 991px) {
+    
+    }
+    
+    //desktop
+    @media (min-width: 992px) {
+    
+    }
+    
+}
+
+#checkout-content {
+    .label {
+        display: block;
+    }
+    
+    input[type=text] {
+        display: block;
+        width: 100%;
+    }
+}
+
+.float-mini-cart {
+    position: relative;
+    float: right;
+    width: 21.7391304348%;
+    
+    height: 67px;
+}
+
+.meal-item__mini-cart {
+    height: 100%;
+    
+    .mini-cart-box{
+        width: 100%;
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        height: 100%;
+        color: #2c2d33;
+        position: relative;
+    }
+}
+
+
+.meal-item__mini-cart{
+    &:hover {
+        .widget-cart {
+            display: block;
+        }
+    }
+}
+
+.meal-prep-cart-page, .meal-prep-checkout-page{
+    .widget-cart{
+        display: none !important;
+    }
+}
+
+.widget-cart {
+    position: absolute;
+    display: none;
+    width: 100%;
+    
+    top: 100%;
+    
+    background: #ccc;
+    padding: 15px;
+    
+    .button{
+        width: 100%;
+        margin-bottom: .6180469716em;
+        text-align: center;
+        
+        background-color: #2c2d33;
+        color: white;
+        
+        &:hover{
+            background-color: #2c2d33;
+            color: white;
+        }
+        
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.product_list_widget{
+    margin-left: 0;
+    list-style: none;
+    
+    li{
+        padding: .6180469716em 0;
+        
+        > a{
+            font-weight: 600;
+            display: block;
+        }
+    }
+}
+
+#site-navigation {
+    width: 73.9130434783%;
+    float: left;
+    margin-right: 4.347826087%;
+    clear: both;
+}
+
+#masthead {
+    .col-full {
+        position: relative;
+    }
+}
+
+.checkout-errors {
+    margin-bottom: 30px;
+}
+
+.checkout-error__item {
+    padding: 10px 15px;
+    background: #e2401c;
+    color: white;
+    
+    margin-bottom: 10px;
+}

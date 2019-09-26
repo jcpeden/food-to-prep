@@ -1,0 +1,147 @@
+$order_items__background: #f8f8f8;
+
+#meal-prep {
+    &__order-data {
+        
+        h2 {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 1px #fff;
+        }
+        
+        .order-title {
+            p {
+                padding: 8px 12px;
+                margin-bottom: 0;
+            }
+        }
+        
+        .meal-prep__order_data {
+            &:before, &:after {
+                display: table;
+                content: ' ';
+            }
+            
+            &:after {
+                clear: both;
+            }
+            
+            clear: both;
+            display: flex;
+        }
+        
+        .order_data_column {
+            width: 46%;
+            padding: 10px 2%;
+            float: left;
+        }
+        
+        .billing-info, .edit-billing-info {
+            .billing-info-row {
+                float: left;
+                width: 100%;
+                margin-bottom: .5em;
+            }
+            
+            .billing-info-half-row {
+                float: left;
+                width: 46%;
+                padding: 0 2%;
+                margin-bottom: 1.5em;
+            }
+            
+            &__title {
+                font-weight: bold;
+                font-size: 1.1em;
+                color: #777;
+                margin: 0;
+                margin-bottom: 8px;
+            }
+            
+            &__value {
+                color: #777;
+                margin: 8px 0;
+            }
+        }
+        
+        .edit-billing-info {
+            margin: 0 -2%;
+            
+            .billing-info-row {
+                padding: 0 2%;
+            }
+            
+            .billing_country {
+                width: 100%;
+            }
+        }
+        
+        .order-info {
+            
+            .order-info-row {
+                margin-bottom: 1.5em;
+            }
+            
+            &__title {
+                font-weight: bold;
+                font-size: 1.1em;
+                color: #777;
+                margin: 8px 0;
+            }
+            
+            &__order-status{
+                width: 100%;
+            }
+            
+        }
+    }
+}
+
+#meal-prep__order-items {
+    padding: 0;
+    
+    .inside {
+        padding: 0;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        
+        th {
+            text-align: left;
+        }
+        
+        th, td {
+            vertical-align: top;
+            
+            padding: 13px;
+        }
+        
+        thead {
+            th {
+                background-color: $order_items__background;
+            }
+        }
+        
+        tfoot{
+            th, td{
+                background-color: $order_items__background;
+            }
+    
+            th{
+                text-align: right;
+            }
+        }
+        
+        .image-thumbnail {
+            width: 100px;
+            
+            > div {
+                width: 80px;
+                height: 80px;
+                background-size: cover;
+            }
+        }
+    }
+}
+

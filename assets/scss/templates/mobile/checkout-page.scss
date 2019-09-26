@@ -1,0 +1,63 @@
+.checkout-page {
+    
+    .table-your-order {
+        margin-bottom: 2.5em;
+        
+        th, td {
+            padding: 1.4em;
+        }
+        
+        .product-name {
+            width: 45%;
+        }
+        
+        .cart-total {
+            &__amount {
+                font-weight: bold;
+            }
+        }
+    }
+    
+    .meal-prep {
+        &__checkout-payment {
+            ul {
+                list-style: none;
+                margin-left: 0;
+            }
+
+            .payment-input {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+    
+                padding: 1.4em;
+                background-color: $table-header-color;
+            }
+            
+            .payment-description{
+                padding: 1.4em;
+                background-color: #fafafa;
+                color: rgba(0,0,0,0.5);
+                
+                display: none;
+            }
+        }
+    }
+    
+    .place-order {
+        margin-top: 2.6em;
+    }
+    
+    #checkout-content {
+        margin-top: 2.5em;
+        
+        .title {
+            margin-bottom: 1em;
+            font-weight: normal;
+        }
+        
+        .billing-info {
+            margin-bottom: 1.5em;
+        }
+    }
+}

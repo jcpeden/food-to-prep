@@ -1,0 +1,653 @@
+# Copyright (C) 2019
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/food-to-prep\n"
+"POT-Creation-Date: 2019-09-26 02:22:36+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: class-wp-osa.php:509
+msgid "Choose File"
+msgstr ""
+
+#: class-wp-osa.php:526
+msgid "Choose Image"
+msgstr ""
+
+#: food-to-prep.php:214
+msgid "Pending payment <span class=\"count\">(%s)</span>"
+msgid_plural "Pending payment <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: food-to-prep.php:222
+msgid "Processing <span class=\"count\">(%s)</span>"
+msgid_plural "Processing <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: food-to-prep.php:230
+msgid "Cancelled <span class=\"count\">(%s)</span>"
+msgid_plural "Cancelled <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: food-to-prep.php:238
+msgid "Completed <span class=\"count\">(%s)</span>"
+msgid_plural "Completed <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/MP_Abstract_Order.php:205 includes/MP_Abstract_Order.php:206
+msgid "FoodToPrep"
+msgstr ""
+
+#: includes/MP_Checkout.php:124
+msgid "<div class=\"checkout-error__item\">%s is required.</div>"
+msgstr ""
+
+#: includes/MP_Checkout.php:134 templates/page-checkout.php:33
+msgid "First name"
+msgstr ""
+
+#: includes/MP_Checkout.php:139 templates/page-checkout.php:38
+msgid "Last name"
+msgstr ""
+
+#: includes/MP_Checkout.php:144 post-types/CPT_MP_Order.php:231
+#: templates/emails/customer-new-order.php:56 templates/page-checkout.php:43
+msgid "Address"
+msgstr ""
+
+#: includes/MP_Checkout.php:149 post-types/CPT_MP_Order.php:196
+#: post-types/CPT_MP_Order.php:236 templates/page-checkout.php:48
+msgid "Postcode"
+msgstr ""
+
+#: includes/MP_Checkout.php:154 templates/page-checkout.php:53
+msgid "Phone"
+msgstr ""
+
+#: includes/MP_Checkout.php:159 templates/page-checkout.php:58
+msgid "Email"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:41 post-types/CPT_MP_Meal.php:65
+msgid "Meals"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:42
+msgid "Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:43
+msgid "All Meals"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:44
+msgid "Meal Archives"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:45
+msgid "Meal Attributes"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:46
+msgid "Insert into Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:47
+msgid "Uploaded to this Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:52
+msgid "Filter Meals list"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:53
+msgid "Meals list navigation"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:54
+msgid "Meals list"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:55
+msgid "New Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:56 post-types/CPT_MP_Order.php:56
+msgid "Add New"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:57
+msgid "Add New Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:58
+msgid "Edit Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:59
+msgid "View Meal"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:60
+msgid "View Meals"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:61
+msgid "Search Meals"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:62
+msgid "No Meals found"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:63
+msgid "No Meals found in trash"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:64
+msgid "Parent Meal:"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:102
+#. translators: %s: post permalink
+msgid "Meal updated. <a target=\"_blank\" href=\"%s\">View Meal</a>"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:103
+msgid "Custom field updated."
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:104
+msgid "Custom field deleted."
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:105
+msgid "Meal updated."
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:107
+#. translators: %s: date and time of the revision
+msgid "Meal restored to revision from %s"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:109
+#. translators: %s: post permalink
+msgid "Meal published. <a href=\"%s\">View Meal</a>"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:110
+msgid "Meal saved."
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:112
+#. translators: %s: post permalink
+msgid "Meal submitted. <a target=\"_blank\" href=\"%s\">Preview Meal</a>"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:114
+#. translators: 1: Publish box date format, see https:secure.php.net/date 2:
+#. Post permalink
+msgid ""
+"Meal scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" "
+"href=\"%2$s\">Preview Meal</a>"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:115
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:117
+#. translators: %s: post permalink
+msgid "Meal draft updated. <a target=\"_blank\" href=\"%s\">Preview Meal</a>"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:133
+msgid "Meal Categories"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:134
+msgid "Meal Category"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:135
+msgid "Search Meal Category"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:136
+msgid "All Meal Category"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:137
+msgid "Parent Meal Category"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:138
+msgid "Parent Meal Category:"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:139
+msgid "Update Meal Category"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:140
+msgid "Add New Meal Category"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:141
+msgid "New Meal Category Name"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:142
+msgid "Categories"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:236
+msgid "Normal Price"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:240
+msgid "Special Price"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:283 templates/cart/cart-content.php:8
+#: templates/emails/customer-new-order.php:17
+msgid "Quantity"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:285
+msgid "Unit"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:41
+msgid "Revice Order Lists"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:42
+msgid "Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:43
+msgid "All Orders"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:44
+msgid "Order Archives"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:45
+msgid "Order Attributes"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:46
+msgid "Insert into Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:47
+msgid "Uploaded to this Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:52
+msgid "Filter Orders list"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:53
+msgid "Orders list navigation"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:54
+msgid "Orders list"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:55
+msgid "New Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:57
+msgid "Add New Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:58
+msgid "Edit Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:59
+msgid "View Order"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:60
+msgid "View Orders"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:61
+msgid "Search Orders"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:62
+msgid "No Orders found"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:63
+msgid "No Orders found in trash"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:64
+msgid "Parent Order:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:65
+msgid "Orders"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:114
+msgid "Order Detail"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:123
+msgid "Order Items"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:155
+msgid "General"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:158
+msgid "Date created:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:164
+msgid "Status:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:185
+msgid "Billing"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:188
+msgid "Customer:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:192
+msgid "Address:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:200
+msgid "Phone Number:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:204
+msgid "Email Address:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:211
+msgid "Customer provided note:"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:221
+msgid "First Name"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:226
+msgid "Last Name"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:241
+msgid "Phone Number"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:245
+msgid "Email Address"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:249
+msgid "Customer provided note"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:304 post-types/CPT_MP_Order.php:316
+#: templates/cart/cart-content.php:50 templates/cart/checkout-content.php:6
+#: templates/cart/checkout-content.php:28
+#: templates/emails/customer-new-order.php:49
+msgid "Total"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:314
+msgid "Status"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:315
+msgid "Qty"
+msgstr ""
+
+#: templates/add-to-cart/add-to-cart.php:9
+msgid "Add"
+msgstr ""
+
+#: templates/cart/cart-content.php:6 templates/cart/checkout-content.php:5
+#: templates/emails/customer-new-order.php:16
+msgid "Product"
+msgstr ""
+
+#: templates/cart/cart-content.php:7 templates/emails/customer-new-order.php:18
+msgid "Price"
+msgstr ""
+
+#: templates/cart/cart-content.php:41
+msgid "Cart totals"
+msgstr ""
+
+#: templates/cart/cart-content.php:46 templates/cart/checkout-content.php:24
+msgid "Subtotal"
+msgstr ""
+
+#: templates/cart/cart-content.php:57
+msgid "Proceed to checkout"
+msgstr ""
+
+#: templates/cart/mini-cart-content.php:26
+msgid "Clear"
+msgstr ""
+
+#: templates/cart/mini-cart-content.php:27
+msgid "Cart"
+msgstr ""
+
+#: templates/emails/customer-new-order.php:7
+msgid "Hi"
+msgstr ""
+
+#: templates/emails/customer-new-order.php:8
+msgid ""
+"Thanks for your order. It’s on-hold until we confirm that payment has been "
+"received. In the meantime, here’s a reminder of what you ordered:"
+msgstr ""
+
+#: templates/emails/customer-new-order.php:40
+msgid "Nothing here!"
+msgstr ""
+
+#: templates/page-cart.php:20
+msgid "CART"
+msgstr ""
+
+#: templates/page-checkout.php:25
+msgid "CHECKOUT"
+msgstr ""
+
+#: templates/page-checkout.php:30
+msgid "Billing details"
+msgstr ""
+
+#: templates/page-checkout.php:63
+msgid "Additional information"
+msgstr ""
+
+#: templates/page-checkout.php:66
+msgid "Order notes"
+msgstr ""
+
+#: templates/page-checkout.php:68
+msgid "Notes about your order, e.g. special notes for delivery."
+msgstr ""
+
+#: templates/page-checkout.php:76
+msgid "Your order"
+msgstr ""
+
+#: templates/page-meal-detail.php:75
+msgid "Category:"
+msgstr ""
+
+#: wposa-init.php:16
+msgid "Paypal Setting"
+msgstr ""
+
+#: wposa-init.php:23
+msgid "Other Settings"
+msgstr ""
+
+#: wposa-init.php:33
+msgid "Client ID"
+msgstr ""
+
+#: wposa-init.php:34
+msgid "PayPal Client ID"
+msgstr ""
+
+#: wposa-init.php:45
+msgid "Client Secret"
+msgstr ""
+
+#: wposa-init.php:46
+msgid "PayPal Client Secret ID"
+msgstr ""
+
+#: wposa-init.php:57
+msgid "PayPal sandbox"
+msgstr ""
+
+#: wposa-init.php:58
+msgid "Enable PayPal sandbox."
+msgstr ""
+
+#: wposa-init.php:76
+msgid "Thanks you page"
+msgstr ""
+
+#: wposa-init.php:77
+msgid ""
+"Page content for thankyou order! We will redirect to this page after "
+"payment success."
+msgstr ""
+
+#: wposa-init.php:88
+msgid "Cart page"
+msgstr ""
+
+#: wposa-init.php:89
+msgid "Page display cart."
+msgstr ""
+
+#: wposa-init.php:100
+msgid "Checkout page"
+msgstr ""
+
+#: wposa-init.php:101
+msgid "Page display checkout."
+msgstr ""
+
+#: wposa-init.php:112
+msgid "Revice order"
+msgstr ""
+
+#: wposa-init.php:134
+msgid "Post Per Page"
+msgstr ""
+
+#: wposa-init.php:151
+msgid "Currency"
+msgstr ""
+
+#: wposa-init.php:152
+msgid "Currency for shop."
+msgstr ""
+
+#: food-to-prep.php:209
+msgctxt "Order status"
+msgid "Pending payment"
+msgstr ""
+
+#: food-to-prep.php:217
+msgctxt "Order status"
+msgid "Processing"
+msgstr ""
+
+#: food-to-prep.php:225
+msgctxt "Order status"
+msgid "Cancelled"
+msgstr ""
+
+#: food-to-prep.php:233
+msgctxt "Order status"
+msgid "Completed"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:48
+msgctxt "meal"
+msgid "Featured Image"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:49
+msgctxt "meal"
+msgid "Set featured image"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:50
+msgctxt "meal"
+msgid "Remove featured image"
+msgstr ""
+
+#: post-types/CPT_MP_Meal.php:51
+msgctxt "meal"
+msgid "Use as featured image"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:48
+msgctxt "mp-order"
+msgid "Featured Image"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:49
+msgctxt "mp-order"
+msgid "Set featured image"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:50
+msgctxt "mp-order"
+msgid "Remove featured image"
+msgstr ""
+
+#: post-types/CPT_MP_Order.php:51
+msgctxt "mp-order"
+msgid "Use as featured image"
+msgstr ""
