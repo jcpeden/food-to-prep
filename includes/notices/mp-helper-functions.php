@@ -7,16 +7,16 @@ function food_to_prep_order_user_billing_email_content($order)
     include(FoodToPrep::template_patch() . 'emails/customer-new-order.php');
     $email_content = ob_get_clean();
 
-    ob_start();
-    include(FoodToPrep::template_patch() . 'emails/css.css');
-    $css = ob_get_clean();
-
-    try {
-        $emogrifier = new \Pelago\Emogrifier($email_content, $css);
-        $email_content = $emogrifier->emogrify();
-    } catch (Exception $e) {
-        error_log($e);
-    }
+//    ob_start();
+//    include(FoodToPrep::template_patch() . 'emails/css.css');
+//    $css = ob_get_clean();
+//
+//    try {
+//        $emogrifier = new \Pelago\Emogrifier($email_content, $css);
+//        $email_content = $emogrifier->emogrify();
+//    } catch (Exception $e) {
+//        error_log($e);
+//    }
 
     return $email_content;
 }
