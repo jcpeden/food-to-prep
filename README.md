@@ -1,5 +1,5 @@
 # Food To Prep #
-Contributors: tweakdigital
+Contributors: tweakdigital, coffeemug
 Tags: ecommerce, e-commerce, sell, meal, food, prep, preparation, cuisine, restaurant, store, paypal, checkout, shop
 Requires at least: 4.5
 Tested up to: 5.2.1
