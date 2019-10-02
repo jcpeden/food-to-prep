@@ -23,8 +23,8 @@ if (!class_exists('MTP_Settings')) :
         function setting_plugin_setup_menu()
         {
             add_menu_page(
-                'Meal Prep',
-                'Meal Prep',
+                'Food to Prep',
+                'Food to Prep',
                 'manage_options',
                 'meal-prep',
                 array($this, 'meal_prep_init'),
@@ -37,7 +37,7 @@ if (!class_exists('MTP_Settings')) :
         function meal_prep_init()
         {
             ?>
-            <h1>Welcome to Meal Prep Setting</h1>
+            <h1>Food To Prep</h1>
             <?php
         }
 
@@ -47,7 +47,7 @@ if (!class_exists('MTP_Settings')) :
             ?>
             <div class="wrap">
                 <?php settings_errors(); ?>
-                <h1 style="font-weight: 700;">Meal Prep Settings</h1>
+                <h1 style="font-weight: 700;">Food To Prep Settings</h1>
                 <form method="post" action="options.php" novalidate="novalidate">
                     <?php
                     settings_fields('meal-prep-option-group');
