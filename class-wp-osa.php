@@ -602,8 +602,7 @@ if ( ! class_exists('MTP_Dashboard_Settings') ) :
         {
             ?>
             <div class="wrap">
-                <h1>MEAL TO PREP Settings API <span
-                        style="font-size:60%;">v<?php esc_html_e(FoodToPrep::plugin_version(), 'food-to-prep') ?></span></h1>
+                <h1>Settings</h1>
             </div>
             <?php $this->show_navigation();
             $this->show_forms();

@@ -1,17 +1,17 @@
 # Food To Prep #
-Contributors: tweakdigital, coffeemug
-Tags: ecommerce, e-commerce, sell, meal, food, prep, preparation, cuisine, restaurant, store, paypal, checkout, shop
-Requires at least: 4.5
-Tested up to: 5.2.1
-Stable Tag: 2.9.16
-License: GPLv2 or later  
-License URI: https://www.gnu.org/licenses/gpl-2.0.html  
+**Contributors:** tweakdigital, coffeemug  
+**Tags:** ecommerce, e-commerce, sell, meal, food, prep, preparation, cuisine, restaurant, store, paypal, checkout, shop  
+**Requires at least:** 4.5  
+**Tested up to:** 5.2.1  
+**Stable tag:** 0.1.6  
+**License:** GPLv2 or later  
+**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
 The easiest way to sell meal preparation with WordPress.
 
 ## Description ##
 
-Food To Prep is a complete eCommerce solution for selling meal preparation on WordPress. 
+Food To Prep is a complete eCommerce solution for selling meal preparation on WordPress.
 
 ### Sell effortlessly ###
 
@@ -29,6 +29,30 @@ We'll be adding more payment gateways as requested by our users.
 
 Food To Prep was built by developers and we'll be supporting it's extension as it's popularity grows. We'll be keeping the core plugin open source and allowing you to work with it any way you like so that it can best meet your meal prep needs.
 
+## Screenshots ##
+
+### 1. Display meals on your site ###
+![Display meals on your site](http://ps.w.org/food-to-prep/assets/screenshot-1.png)
+
+### 2. Allow customers to add meals to their cart ###
+![Allow customers to add meals to their cart](http://ps.w.org/food-to-prep/assets/screenshot-2.png)
+
+### 3. Allow customers to view their meal prep order before purchase ###
+![Allow customers to view their meal prep order before purchase](http://ps.w.org/food-to-prep/assets/screenshot-3.png)
+
+### 4. Allow users to pay for their meal prep order ###
+![Allow users to pay for their meal prep order](http://ps.w.org/food-to-prep/assets/screenshot-4.png)
+
+### 5. Manage meals on your site ###
+![Manage meals on your site](http://ps.w.org/food-to-prep/assets/screenshot-5.png)
+
+### 6. View a list of meal prep orders via the WordPress dashboard ###
+![View a list of meal prep orders via the WordPress dashboard](http://ps.w.org/food-to-prep/assets/screenshot-6.png)
+
+### 7. View a customer's individual meal prep order ###
+![View a customer's individual meal prep order](http://ps.w.org/food-to-prep/assets/screenshot-7.png)
+
+
 ## Installation ##
 
 1. Activate the plugin
@@ -44,6 +68,12 @@ Food To Prep was built by developers and we'll be supporting it's extension as i
 Please open a support ticket in the forum and we'll deal with your issue as soon as possible. We aim to deal with any queries within 24 hours but please be patient if it's a weekend!
 
 ## Changelog ##
+
+### 0.1.6, October 02, 2019 ###
+* Update stable tag.
+
+### 0.1.5, September 28, 2019 ###
+* Updating plugin strings.
 
 ### 0.1.4, September 25, 2019 ###
 * Code fixes to get plugin approved by WordPress.

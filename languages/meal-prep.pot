@@ -519,11 +519,11 @@ msgid "Category:"
 msgstr ""
 
 #: wposa-init.php:16
-msgid "Paypal Setting"
+msgid "PayPal Settings"
 msgstr ""
 
 #: wposa-init.php:23
-msgid "Other Settings"
+msgid "General Settings"
 msgstr ""
 
 #: wposa-init.php:33
@@ -535,7 +535,7 @@ msgid "PayPal Client ID"
 msgstr ""
 
 #: wposa-init.php:45
-msgid "Client Secret"
+msgid "Client Secret "
 msgstr ""
 
 #: wposa-init.php:46
@@ -543,45 +543,45 @@ msgid "PayPal Client Secret ID"
 msgstr ""
 
 #: wposa-init.php:57
-msgid "PayPal sandbox"
+msgid "Enable Sandbox Mode"
 msgstr ""
 
 #: wposa-init.php:58
-msgid "Enable PayPal sandbox."
+msgid "Enable PayPal sandbox to test payments"
 msgstr ""
 
 #: wposa-init.php:76
-msgid "Thanks you page"
+msgid "Order Confirmation Page"
 msgstr ""
 
 #: wposa-init.php:77
 msgid ""
-"Page content for thankyou order! We will redirect to this page after "
+"Redirect the user to this page after they purchase."
 "payment success."
 msgstr ""
 
 #: wposa-init.php:88
-msgid "Cart page"
+msgid "Cart Page"
 msgstr ""
 
 #: wposa-init.php:89
-msgid "Page display cart."
+msgid "Display the user's shopping cart on this page."
 msgstr ""
 
 #: wposa-init.php:100
-msgid "Checkout page"
+msgid "Checkout Page"
 msgstr ""
 
 #: wposa-init.php:101
-msgid "Page display checkout."
+msgid "Display the checkout on this page."
 msgstr ""
 
 #: wposa-init.php:112
-msgid "Revice order"
+msgid "Order Review Page"
 msgstr ""
 
 #: wposa-init.php:134
-msgid "Post Per Page"
+msgid "Meals Per Page"
 msgstr ""
 
 #: wposa-init.php:151
@@ -589,7 +589,7 @@ msgid "Currency"
 msgstr ""
 
 #: wposa-init.php:152
-msgid "Currency for shop."
+msgid "Which currency would you like to run your shop in?"
 msgstr ""
 
 #: food-to-prep.php:209

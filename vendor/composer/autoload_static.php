@@ -7,29 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInit3b913e49939b6f14a937a710cbd96098
 {
     public static $prefixLengthsPsr4 = array (
-        'S' => 
-        array (
-            'Symfony\\Component\\CssSelector\\' => 30,
-        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
-            'Pelago\\' => 7,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Component\\CssSelector\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/css-selector',
-        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
-        ),
-        'Pelago\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pelago/emogrifier/src',
         ),
     );
 
