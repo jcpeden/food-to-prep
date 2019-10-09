@@ -70,7 +70,7 @@ Please open a support ticket in the forum and we'll deal with your issue as soon
 ## Changelog ##
 
 ### 0.1.7, October 09, 2019 ###
-* Fix error gutenberg editor *
+* Fix error gutenberg editor
 
 ### 0.1.6, October 02, 2019 ###
 * Update stable tag.
