@@ -36,23 +36,7 @@ if (!class_exists('CPT_MP_Meal')) :
 
         }
 
-        function set_custom_edit_meal_columns($columns){
-            $columns['price'] = __('Price', 'food-to-prep');
 
-            return $columns;
-        }
-
-        function custom_meal_column($column, $post_id)
-        {
-            $meal = get_post($post_id);
-            $product = new MP_Product($meal);
-
-            switch ($column) {
-                case 'price' :
-                    echo esc_html($product->get_formated_normal_price());
-                    break;
-            }
-        }
 
 
         /**
@@ -338,6 +322,35 @@ if (!class_exists('CPT_MP_Meal')) :
             $this->save_details_meta();
         }
 
+        /**
+         * Add columns to admin list view.
+         *
+         * @param $columns
+         * @return mixed
+         */
+        function set_custom_edit_meal_columns($columns){
+            $columns['price'] = __('Price', 'food-to-prep');
+
+            return $columns;
+        }
+
+        /**
+         * Render column list view.
+         *
+         * @param $column
+         * @param $post_id
+         */
+        function custom_meal_column($column, $post_id)
+        {
+            $meal = get_post($post_id);
+            $product = new MP_Product($meal);
+
+            switch ($column) {
+                case 'price' :
+                    echo esc_html($product->get_formated_normal_price());
+                    break;
+            }
+        }
 
 
         function get_custom_post_type_template( $single_template ) {
