@@ -7,7 +7,7 @@
  * Author URI:      http://www.tweakdigital.co.uk/
  * Text Domain:     food-to-prep
  * Domain Path:     /languages
- * Version:         0.1.6
+ * Version:         0.1.7
  *
  * @package         Meal_Prep
  */
