@@ -27,6 +27,9 @@ if (!class_exists('CPT_MP_Meal')) :
 
             add_action('admin_init', array($this, 'metabox_init'));
             add_action('save_post', array($this, 'save_meal_cpt_meta'));
+
+            add_filter( 'single_template', array($this, 'get_custom_post_type_template') );
+
         }
 
 
@@ -311,6 +314,18 @@ if (!class_exists('CPT_MP_Meal')) :
         {
             $this->save_price_meta();
             $this->save_details_meta();
+        }
+
+
+
+        function get_custom_post_type_template( $single_template ) {
+            global $post;
+
+            if ( $this->post_type === $post->post_type ) {
+                $single_template = FoodToPrep::template_patch() . 'single-meal.php';
+            }
+
+            return $single_template;
         }
     }
 
