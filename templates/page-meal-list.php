@@ -103,11 +103,11 @@ $maxium_page = apply_filters('compute_pagination', array($total_meal, $posts_per
                     <div class="col-12">
                         <?php if( $total_meal > $posts_per_page ): ?>
                         <div id="meal-pagination" class="meal-pagination"
-                             data-total="<?php esc_attr_e($total_meal, 'food-to-prep'); ?>"
-                             data-per-page="<?php esc_attr_e($posts_per_page, 'food-to-prep'); ?>"
-                             data-template-uri="<?php esc_attr_e($template_pagination_uri, 'food-to-prep'); ?>"
-                             data-paged="<?php esc_attr_e($paged, 'food-to-prep'); ?>"
-                             data-param="<?php esc_attr_e($param_get, 'food-to-prep'); ?>"
+                             data-total="<?php echo esc_attr($total_meal); ?>"
+                             data-per-page="<?php echo esc_attr($posts_per_page); ?>"
+                             data-template-uri="<?php echo esc_attr($template_pagination_uri); ?>"
+                             data-paged="<?php echo esc_attr($paged); ?>"
+                             data-param="<?php echo esc_attr($param_get); ?>"
                         >
                         </div>
                         <?php endif; ?>

@@ -514,7 +514,7 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: templates/page-meal-detail.php:75
+#: templates/single-meal.php:75
 msgid "Category:"
 msgstr ""
 
