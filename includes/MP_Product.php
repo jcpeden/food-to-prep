@@ -50,6 +50,10 @@ if (!class_exists('MP_Product')) :
             return $this->get_prop('normal_price');
         }
 
+        public function get_formated_normal_price(){
+            return FTP()->get_format_currency(number_format($this->get_normal_price(),2));
+        }
+
         public function get_slug()
         {
             return $this->post->post_name;

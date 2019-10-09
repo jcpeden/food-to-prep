@@ -25,7 +25,7 @@ if (!class_exists('MTP_Settings')) :
             add_menu_page(
                 'Food to Prep',
                 'Food to Prep',
-                'manage_options',
+                'edit_posts',
                 'meal-prep',
                 array($this, 'meal_prep_init'),
                 'dashicons-carrot',

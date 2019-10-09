@@ -57,6 +57,8 @@ Please open a support ticket in the forum and we'll deal with your issue as soon
 
 = 0.1.7, October 09, 2019 =
 * Fix error gutenberg editor
+* Fix mini cart miss href
+* Add column price in Admin
 
 = 0.1.6, October 02, 2019 =
 * Update stable tag.
