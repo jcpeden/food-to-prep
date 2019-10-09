@@ -25,11 +25,33 @@ if (!class_exists('CPT_MP_Meal')) :
             add_action('init', array($this, 'meal_category_inti'), 0);
             add_action('init', array($this, 'meal_category_change_category_update_count_cb'), 100);
 
+            add_filter("manage_{$this->post_type}_posts_columns", array($this, 'set_custom_edit_meal_columns'));
+
+            add_action("manage_{$this->post_type}_posts_custom_column", array($this, 'custom_meal_column'), 10, 2);
+
             add_action('admin_init', array($this, 'metabox_init'));
             add_action('save_post', array($this, 'save_meal_cpt_meta'));
 
             add_filter( 'single_template', array($this, 'get_custom_post_type_template') );
 
+        }
+
+        function set_custom_edit_meal_columns($columns){
+            $columns['price'] = __('Price', 'food-to-prep');
+
+            return $columns;
+        }
+
+        function custom_meal_column($column, $post_id)
+        {
+            $meal = get_post($post_id);
+            $product = new MP_Product($meal);
+
+            switch ($column) {
+                case 'price' :
+                    echo esc_html($product->get_formated_normal_price());
+                    break;
+            }
         }
 
 
