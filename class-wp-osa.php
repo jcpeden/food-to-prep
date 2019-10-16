@@ -596,7 +596,7 @@ if ( ! class_exists('MTP_Dashboard_Settings') ) :
                 'Payment Settings',
                 'Payment Settings',
                 'manage_options',
-                'wp_osa_settings',
+                'food-to-prep-settings',
                 array( $this, 'plugin_page' )
             );
 
