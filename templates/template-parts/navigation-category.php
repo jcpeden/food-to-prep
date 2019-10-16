@@ -7,7 +7,8 @@
 
 global $taxonomy;
 
-$category_id = intval(get_query_var('category'));
+$category_id = get_query_var('cat');
+
 
 $args_meal = array(
     'taxonomy' => array($taxonomy),
@@ -17,7 +18,7 @@ $args_meal = array(
 
 $terms_meal = get_terms($args_meal);
 
-$template_uri = $template_sort_uri = '/meal-list/';
+$template_uri = home_url( FTP()->endpoint_menu());
 if ($category_id) {
     $template_sort_uri .= $category_id . '/';
 }
@@ -37,14 +38,14 @@ if (array_key_exists('sortby', $_GET)) {
         <div class="row">
             <ul class="meal-category">
                 <li class="category-item <?php esc_attr_e((!$category_id) ? 'active' : '', 'food-to-prep'); ?>" id="category-item-all">
-                    <a href="<?php esc_attr_e($template_uri . $param_get, 'food-to-prep'); ?>">All</a>
+                    <a href="<?php echo esc_attr($template_uri . $param_get); ?>"><?php esc_html_e('All', 'food-to-prep') ?></a>
                 </li>
                 <?php
                 foreach ($terms_meal as $index => $term):
                     ?>
                     <li class="category-item <?php esc_attr_e(($category_id == $term->term_id) ? 'active' : '', 'food-to-prep'); ?>"
                         id="category-item-<?php esc_attr_e($term->slug, 'food-to-prep') ?>">
-                        <a href="<?php esc_attr_e($template_uri . ($term->term_id) . $param_get, 'food-to-prep'); ?>"><?php esc_attr_e($term->name, 'food-to-prep') ?></a>
+                        <a href="<?php echo get_category_link($term->term_id); ?>"><?php esc_attr_e($term->name, 'food-to-prep') ?></a>
                     </li>
                 <?php
                 endforeach;

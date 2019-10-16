@@ -306,6 +306,15 @@ function FTP()
     return FoodToPrep::get_instance();
 }
 
+
+register_deactivation_hook(__FILE__, 'flush_rewrite_rules');
+register_activation_hook(__FILE__, 'MPP_flush_rewrites');
+function MPP_flush_rewrites()
+{
+    flush_rewrite_rules();
+}
+
+
 /**
  *
  * Filter function get excerpt content
