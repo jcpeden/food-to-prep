@@ -33,6 +33,7 @@ if (!class_exists('CPT_MP_Meal')) :
             add_action('save_post', array($this, 'save_meal_cpt_meta'));
 
             add_filter( 'single_template', array($this, 'get_custom_post_type_template') );
+            add_filter( 'category_template', array($this, 'filter_category_template') );
 
         }
 
@@ -362,6 +363,18 @@ if (!class_exists('CPT_MP_Meal')) :
 
             return $single_template;
         }
+
+
+        function filter_category_template( $template ) {
+
+            $cat_id = get_query_var('cat');
+            if ($cat_id){
+                $template = FoodToPrep::template_patch() . 'page-meal-list.php';
+            }
+
+            return $template;
+        }
+
     }
 
     new CPT_MP_Meal();
