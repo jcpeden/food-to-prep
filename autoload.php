@@ -17,7 +17,7 @@ function meal_to_prep_autoloader($class_name ) {
 
 
 require_once 'Route.php';
-require_once 'settings/MTP_Settings.php';
+//require_once 'settings/MTP_Settings.php';
 
 
 require_once 'class-wp-osa.php';

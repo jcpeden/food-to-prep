@@ -7,7 +7,7 @@
  * Author URI:      http://www.tweakdigital.co.uk/
  * Text Domain:     food-to-prep
  * Domain Path:     /languages
- * Version:         0.1.7
+ * Version:         0.1.8
  *
  * @package         Meal_Prep
  */
@@ -96,6 +96,8 @@ class FoodToPrep
     private function __construct()
     {
         add_action('init', array($this, 'register_assets_plugin'));
+        add_filter( 'plugin_row_meta', array($this, 'support_and_faq_links'), 10, 4 );
+
 
         add_filter('page_template', array($this, 'custom_page_template'));
 
@@ -113,6 +115,8 @@ class FoodToPrep
         $this->initialize_ajax();
         $this->initialize_settings();
     }
+
+
 
     function register_assets_plugin()
     {
@@ -268,6 +272,17 @@ class FoodToPrep
         }
         return $this->settings->get_currency_symbol() . "0";
     }
+
+
+    function support_and_faq_links($links_array, $plugin_file_name, $plugin_data, $status)
+    {
+        if (strpos($plugin_file_name, basename(__FILE__))){
+            // you can still use array_unshift() to add links at the beginning
+            $links_array[] = '<a href="https://wordpress.org/support/plugin/food-to-prep/" target="_blank">Support</a>';
+        }
+
+        return $links_array;
+    }
 }
 
 add_action('plugins_loaded', array('FoodToPrep', 'get_instance'));
@@ -371,65 +386,4 @@ add_filter('compute_pagination', function ($data = array('total' => 0, 'posts_pe
     $total = array_key_exists('total', $data) ? $data['total'] : $data[0];
     $posts_per_page = array_key_exists('posts_per_page', $data) ? $data['posts_per_page'] : $data[1];
     return round($total / $posts_per_page, 0);
-});
-
-/**
- *
- * Get list countries OR get country with value
- *
- * @param string $value Optional
- * @return array $countries
- *
- */
-add_filter('get_countries', function ($value = '') {
-    $coutries = array(
-        "AX" => [
-            "name" => "Åland Islands",
-            "value" => "AX",
-            "text" => "Åland Islands"
-        ],
-        "AF" => [
-            "name" => "Afghanistan",
-            "value" => "AF",
-            "text" => "Afghanistan"
-        ],
-        "AL" => [
-            "name" => "Albania",
-            "value" => "AL",
-            "text" => "Albania"
-        ],
-        "DZ" => [
-            "name" => "Algeria",
-            "value" => "DZ",
-            "text" => "Algeria"
-        ],
-        "AS" => [
-            "name" => "American Samoa",
-            "value" => "AS",
-            "text" => "American Samoa"
-        ],
-        "AD" => [
-            "name" => "Andorra",
-            "value" => "AD",
-            "text" => "Andorra"
-        ],
-        "AO" => [
-            "name" => "Angola",
-            "value" => "AO",
-            "text" => "Angola"
-        ],
-        "AI" => [
-            "name" => "Anguilla",
-            "value" => "AI",
-            "text" => "Anguilla"
-        ],
-    );
-
-    if (trim($value) && $value != 'all') {
-        if (array_key_exists($value, $coutries)) {
-            return $coutries[$value];
-        }
-        return array();
-    }
-    return $coutries;
 });
