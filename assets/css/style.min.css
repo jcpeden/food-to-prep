@@ -142,10 +142,6 @@
 .meal-prep #meal-detail .meal-item__add-to-cart .meal-item-quantity .input-quantity.has-error {
   outline: 1px solid #EE1D1D;
 }
-.meal-prep #meal-detail .meal-item__add-to-cart .error-message {
-  position: absolute;
-  bottom: -25px;
-}
 .meal-prep #meal-detail .meal-item__add-to-cart .button {
   width: 150px;
 }
@@ -209,6 +205,14 @@
 }
 .meal-prep .checkout-page #checkout-content .billing-info {
   margin-bottom: 1.5em;
+}
+@media screen and (max-width: 669px) {
+  .meal-prep .checkout-page #checkout-content {
+    margin-top: 1em;
+  }
+  .meal-prep .checkout-page #checkout-content .billing-info {
+    margin-bottom: 0.5em;
+  }
 }
 .meal-prep .grid-gallery {
   margin-left: -12px;
@@ -341,7 +345,7 @@
 .meal-prep #meal-category-sortby .sortby-meal {
   display: flex;
   flex-direction: row;
-  padding: 0 24px;
+  padding: 0 20px;
   font-size: 0.8em;
   text-transform: uppercase;
   color: #666;
@@ -405,6 +409,11 @@
 .meal-prep #post-navigation .page-numbers:hover {
   text-decoration: none;
   background-color: #d5d5d5;
+}
+@media screen and (max-width: 576px) {
+  .no-wc-breadcrumb .site-header {
+    margin-bottom: 1em !important;
+  }
 }
 #checkout-content .label {
   display: block;

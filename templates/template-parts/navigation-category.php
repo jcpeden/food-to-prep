@@ -9,7 +9,6 @@ $taxonomy = 'meal-category';
 
 $category_id = get_query_var('cat');
 
-
 $args_meal = array(
     'taxonomy' => array($taxonomy),
     'hide_empty' => true,
@@ -18,27 +17,15 @@ $args_meal = array(
 
 $terms_meal = get_terms($args_meal);
 
-$template_uri = home_url( FTP()->endpoint_menu());
-//if ($category_id) {
-//    $template_sort_uri .= $category_id . '/';
-//}
-
-$param_get = '';
-$sort_key = '';
-if (array_key_exists('sortby', $_GET)) {
-    $sort_key = sanitize_text_field($_GET['sortby']);
-    $param_get = '?sortby=' . $sort_key;
-}
-
 ?>
-<div class="container">
-
+<section>
     <div class="meal-item__messages"></div>
     <div id="meal-category-filter" class="meal-category-filter">
         <div class="row">
             <ul class="meal-category">
-                <li class="category-item <?php esc_attr_e((!$category_id) ? 'active' : '', 'food-to-prep'); ?>" id="category-item-all">
-                    <a href="<?php echo esc_attr($template_uri . $param_get); ?>"><?php esc_html_e('All', 'food-to-prep') ?></a>
+                <li class="category-item <?php esc_attr_e((!$category_id) ? 'active' : '', 'food-to-prep'); ?>"
+                    id="category-item-all">
+                    <a href="<?php echo esc_html(home_url(FTP()->endpoint_menu())); ?>"><?php esc_html_e('All', 'food-to-prep') ?></a>
                 </li>
                 <?php
                 foreach ($terms_meal as $index => $term):
@@ -66,7 +53,7 @@ if (array_key_exists('sortby', $_GET)) {
                             'oldest' => 'OLDEST'
                         );
 
-                        foreach ($keys as $key => $title){
+                        foreach ($keys as $key => $title) {
 
                             $sortby_url = esc_url(add_query_arg(array(
                                 'sortby' => $key
@@ -85,4 +72,4 @@ if (array_key_exists('sortby', $_GET)) {
             </div>
         </div>
     </div>
-</div>
+</section>

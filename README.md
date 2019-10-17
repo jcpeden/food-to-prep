@@ -69,6 +69,10 @@ Please open a support ticket in the forum and we'll deal with your issue as soon
 
 ## Changelog ##
 
+### 0.1.9, October 17, 2019 ###
+* Update reponsive
+* Remove test payment
+
 ### 0.1.8, October 17, 2019 ###
 * Remove dashboard settings page
 * Add hot link support for plugin
