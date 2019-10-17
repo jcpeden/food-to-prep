@@ -16,9 +16,7 @@ function meal_to_prep_autoloader($class_name ) {
 }
 
 
-require_once 'Route.php';
-require_once 'settings/MTP_Settings.php';
-
+require_once 'includes/db/db-init.php';
 
 require_once 'class-wp-osa.php';
 require_once 'wposa-init.php';
@@ -29,9 +27,6 @@ require_once 'mp-template-functions.php';
 require_once 'includes/payments/MP_Check_Gateway.php';
 require_once 'includes/payments/MP_PayPal_Gateway.php';
 
-
-//require_once 'class-meal-prep-check-payment.php';
-//require_once 'class-meal-prep-paypal.php';
 
 require_once 'includes/notices/mp-order-functions.php';
 require_once 'includes/notices/mp-helper-functions.php';

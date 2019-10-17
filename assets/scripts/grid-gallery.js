@@ -2,24 +2,25 @@
 
 (($) => {
     $(document).ready( function() {
-        var $grid = $('.grid').isotope({
-            itemSelector: '.grid-item',
-            layoutMode: 'fitRows',
-            isInitLayout: false
-        })
-        .on( 'arrangeComplete', function( event, filteredItems ) {
-            $(this).removeClass('hide');
-        });
-        $grid.isotope();
+        // var $grid = $('.grid').isotope({
+        //     itemSelector: '.grid-item',
+        //     layoutMode: 'fitRows',
+        //     isInitLayout: false
+        // })
+        // .on( 'arrangeComplete', function( event, filteredItems ) {
+        //     $(this).removeClass('hide');
+        // });
+        // $grid.isotope();
 
-        $('#meal-pagination').pagination({
-            currentPage: $('#meal-pagination').data('paged'),
-            items: $('#meal-pagination').data('total'),
-            itemsOnPage: $('#meal-pagination').data('per-page'),
-            cssStyle: 'light-theme',
-            hrefTextPrefix: $('#meal-pagination').data('template-uri')
-        });
-        let param = $('#meal-pagination').data('param');
+        // $('#meal-pagination').pagination({
+        //     currentPage: $('#meal-pagination').data('paged'),
+        //     items: $('#meal-pagination').data('total'),
+        //     itemsOnPage: $('#meal-pagination').data('per-page'),
+        //     cssStyle: 'light-theme',
+        //     hrefTextPrefix: $('#meal-pagination').data('template-uri')
+        // });
+        // let param = $('#meal-pagination').data('param');
+
         $('#meal-pagination .page-link').each(function () {
            let href = $(this).attr('href');
            $(this).attr('href', href+param);

@@ -3,7 +3,7 @@ Contributors: tweakdigital, coffeemug
 Tags: ecommerce, e-commerce, sell, meal, food, prep, preparation, cuisine, restaurant, store, paypal, checkout, shop
 Requires at least: 4.5
 Tested up to: 5.2.1
-Stable tag: 0.1.7
+Stable tag: 0.1.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,11 @@ Food To Prep was built by developers and we'll be supporting it's extension as i
 Please open a support ticket in the forum and we'll deal with your issue as soon as possible. We aim to deal with any queries within 24 hours but please be patient if it's a weekend!
 
 == Changelog ==
+
+= 0.1.8, October 17, 2019 =
+* Remove dashboard settings page
+* Add hot link support for plugin
+* Refactor menu link, pagination, sortby
 
 = 0.1.7, October 09, 2019 =
 * Fix error gutenberg editor

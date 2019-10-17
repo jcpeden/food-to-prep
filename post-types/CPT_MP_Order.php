@@ -62,7 +62,7 @@ if (!class_exists('CPT_MP_Order')) :
                     'not_found' => __('No Orders found', 'food-to-prep'),
                     'not_found_in_trash' => __('No Orders found in trash', 'food-to-prep'),
                     'parent_item_colon' => __('Parent Order:', 'food-to-prep'),
-                    'menu_name' => __('Orders', 'food-to-prep'),
+                    'menu_name' => __('Food To Prep', 'food-to-prep'),
                 ),
                 'public' => false,
                 'show_ui' => true,
@@ -78,7 +78,8 @@ if (!class_exists('CPT_MP_Order')) :
                 'rewrite' => true,
                 'query_var' => true,
                 'show_in_nav_menus' => false,
-                'show_in_menu' => false
+                'show_in_menu' => true,
+                'menu_icon' => 'dashicons-carrot'
             ));
 
 
@@ -97,13 +98,13 @@ if (!class_exists('CPT_MP_Order')) :
             $cpt_obj = get_post_type_object($cpt);
 
 
-            add_submenu_page(
-                'meal-prep',                      // parent slug
-                $cpt_obj->labels->name,            // page title
-                $cpt_obj->labels->menu_name,       // menu title
-                $cpt_obj->cap->edit_posts,         // capability
-                'edit.php?post_type=' . $cpt       // menu slug
-            );
+//            add_submenu_page(
+//                'meal-prep',                      // parent slug
+//                $cpt_obj->labels->name,            // page title
+//                $cpt_obj->labels->menu_name,       // menu title
+//                $cpt_obj->cap->edit_posts,         // capability
+//                'edit.php?post_type=' . $cpt       // menu slug
+//            );
         }
 
 

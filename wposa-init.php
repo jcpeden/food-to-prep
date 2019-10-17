@@ -71,6 +71,19 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
     MTP_OSA()->add_field(
         'meal_prep_other',
         array(
+            'id'      => 'endpoint_meal_list',
+            'type'    => 'select',
+            'name'    => __( 'Menu', 'food-to-prep' ),
+            'desc'    => __( 'Page content for Menu page. This display list food.', 'food-to-prep' ),
+            'options' => $page_options
+        )
+    );
+
+
+    // Field: Thanks you page.
+    MTP_OSA()->add_field(
+        'meal_prep_other',
+        array(
             'id'      => 'endpoint_thankyou',
             'type'    => 'select',
             'name'    => __( 'Thanks you page', 'food-to-prep' ),

@@ -588,21 +588,25 @@ if ( ! class_exists('MTP_Dashboard_Settings') ) :
         }
 
         public function admin_menu() {
+
+            $cpt = 'mp-order';
+
             add_submenu_page(
-                'meal-prep',
+                'edit.php?post_type=' . $cpt,
                 'Payment Settings',
                 'Payment Settings',
                 'manage_options',
-                'wp_osa_settings',
+                'food-to-prep-settings',
                 array( $this, 'plugin_page' )
             );
+
         }
 
         public function plugin_page()
         {
             ?>
             <div class="wrap">
-                <h1>Settings</h1>
+                <h1>Settings Food To Prep <small style="font-size: 0.6em;">v<?php echo esc_html(FoodToPrep::plugin_version()) ?></small></h1>
             </div>
             <?php $this->show_navigation();
             $this->show_forms();
