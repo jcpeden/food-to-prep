@@ -13,14 +13,14 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
     MTP_OSA()->add_section(
         array(
             'id'    => 'meal_prep_paypal_express',
-            'title' => __( 'Paypal Setting', 'food-to-prep' ),
+            'title' => __( 'PayPal Settings', 'food-to-prep' ),
         )
     );
-    // Section: Other Settings.
+    // Section: General Settings.
     MTP_OSA()->add_section(
         array(
             'id'    => 'meal_prep_other',
-            'title' => __( 'Other Settings', 'food-to-prep' ),
+            'title' => __( 'General Settings', 'food-to-prep' ),
         )
     );
 
@@ -48,14 +48,14 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
         )
     );
 
-    // Field: PayPal sandbox
+    // Field: Enable Sandbox Mode
     MTP_OSA()->add_field(
         'meal_prep_paypal_express',
         array(
             'id'   => 'paypal_test_mode',
             'type' => 'checkbox',
-            'name' => __( 'PayPal sandbox', 'food-to-prep' ),
-            'desc' => __( 'Enable PayPal sandbox.', 'food-to-prep' )
+            'name' => __( 'Enable Sandbox Mode', 'food-to-prep' ),
+            'desc' => __( 'Enable PayPal sandbox to test payments.', 'food-to-prep' )
         )
     );
 
@@ -86,32 +86,32 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
         array(
             'id'      => 'endpoint_thankyou',
             'type'    => 'select',
-            'name'    => __( 'Thanks you page', 'food-to-prep' ),
-            'desc'    => __( 'Page content for thankyou order! We will redirect to this page after payment success.', 'food-to-prep' ),
+            'name'    => __( 'Order Confirmation Page', 'food-to-prep' ),
+            'desc'    => __( 'Redirect the user to this page after they purchase. payment success.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
 
-    // Field: Cart page.
+    // Field: Cart Page.
     MTP_OSA()->add_field(
         'meal_prep_other',
         array(
             'id'      => 'endpoint_cart',
             'type'    => 'select',
-            'name'    => __( 'Cart page', 'food-to-prep' ),
-            'desc'    => __( 'Page display cart.', 'food-to-prep' ),
+            'name'    => __( 'Cart Page', 'food-to-prep' ),
+            'desc'    => __( 'Display the user\'s shopping cart on this page.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
 
-    // Field: Checkout page.
+    // Field: Checkout Page.
     MTP_OSA()->add_field(
         'meal_prep_other',
         array(
             'id'      => 'endpoint_checkout',
             'type'    => 'select',
-            'name'    => __( 'Checkout page', 'food-to-prep' ),
-            'desc'    => __( 'Page display checkout.', 'food-to-prep' ),
+            'name'    => __( 'Checkout Page', 'food-to-prep' ),
+            'desc'    => __( 'Display the checkout on this page.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
@@ -122,7 +122,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
         array(
             'id'      => 'endpoint_revice_order',
             'type'    => 'text',
-            'name'    => __( 'Revice order', 'food-to-prep' ),
+            'name'    => __( 'Order Review Page', 'food-to-prep' ),
             'default' => 'meal-revice-revice',
         )
     );
@@ -144,7 +144,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
         array(
             'id'      => 'post_per_page',
             'type'    => 'number',
-            'name'    => __( 'Post Per Page', 'food-to-prep' ),
+            'name'    => __( 'Meals Per Page', 'food-to-prep' ),
             'default' => '3',
         )
     );
@@ -162,7 +162,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'currency',
             'type'    => 'select',
             'name'    => __( 'Currency', 'food-to-prep' ),
-            'desc'    => __( 'Currency for shop.', 'food-to-prep' ),
+            'desc'    => __( 'Which currency would you like to run your shop in?.', 'food-to-prep' ),
             'options' => $currency_support
         )
     );
