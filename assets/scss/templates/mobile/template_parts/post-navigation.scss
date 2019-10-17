@@ -1,0 +1,32 @@
+#post-navigation{
+    
+    .nav-links{
+        width: 100%;
+        
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+    }
+    
+    .page-numbers{
+        position: relative;
+        display: block;
+        padding: .5rem .75rem;
+        margin-left: -1px;
+        line-height: 1.25;
+        color: #007bff;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        
+        &.current{
+            z-index: 1;
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

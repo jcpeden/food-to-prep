@@ -1,7 +1,8 @@
 .grid-gallery {
   margin-left: -12px;
   margin-right: -12px;
-  
+  display: flex;
+  flex-flow: wrap;
   
   .grid-item {
     width: 33.33%;
@@ -97,6 +98,22 @@
         transform: translateX(-50%);
         padding: 13px;
       }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-gallery {
+    .grid-item {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 669px){
+  .grid-gallery {
+    .grid-item {
+      width: 100%;
     }
   }
 }

@@ -15,6 +15,8 @@
 require_once 'autoload.php';
 require_once 'vendor/autoload.php';
 
+//return false;
+
 class FoodToPrep
 {
     private static $instance;
@@ -128,10 +130,10 @@ class FoodToPrep
 
             wp_enqueue_style('food-prep-boostrap', FoodToPrep::plugin_asset_url() . '/libs/bootstrap-4.3.1/css/bootstrap.min.css', '', null);
             wp_enqueue_style('food-prep-plugin-style', FoodToPrep::plugin_asset_url() . '/css/style.min.css', '', FoodToPrep::plugin_version());
-            wp_enqueue_style('food-prep-pagination', FoodToPrep::plugin_asset_url() . '/css/simplePagination.css', '', FoodToPrep::plugin_version());
+//            wp_enqueue_style('food-prep-pagination', FoodToPrep::plugin_asset_url() . '/css/simplePagination.css', '', FoodToPrep::plugin_version());
 
             wp_enqueue_script('food-prep-boostrap-script', FoodToPrep::plugin_asset_url() . '/libs/bootstrap-4.3.1/js/bootstrap.min.js', array('jquery'), null, true);
-            wp_enqueue_script('food-prep-isotope-gallery', FoodToPrep::plugin_asset_url() . '/libs/isotope-3.0.6/isotope.pkgd.min.js', array('jquery'), null, true);
+//            wp_enqueue_script('food-prep-isotope-gallery', FoodToPrep::plugin_asset_url() . '/libs/isotope-3.0.6/isotope.pkgd.min.js', array('jquery'), null, true);
             wp_enqueue_script('food-prep-grid-gallery', FoodToPrep::plugin_asset_url() . '/js/grid-gallery.min.js', array('jquery'), FoodToPrep::plugin_version(), true);
             wp_enqueue_script('food-prep-add-to-cart', FoodToPrep::plugin_asset_url() . '/js/add-to-cart.min.js', array('jquery'), FoodToPrep::plugin_version(), true);
 
@@ -141,7 +143,7 @@ class FoodToPrep
                     'mp_ajax_url' => apply_filters('mp_ajax_endpoint', array())
                 ));
 
-            wp_enqueue_script('pagination-script', FoodToPrep::plugin_asset_url() . '/js/jquery.simplePagination.js', array('jquery'), FoodToPrep::plugin_version(), true);
+//            wp_enqueue_script('pagination-script', FoodToPrep::plugin_asset_url() . '/js/jquery.simplePagination.js', array('jquery'), FoodToPrep::plugin_version(), true);
         }
     }
 

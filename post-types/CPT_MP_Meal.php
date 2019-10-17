@@ -9,7 +9,7 @@ if (!class_exists('CPT_MP_Meal')) :
      * Global variable
      *
      */
-    $taxonomy = 'category';
+    $taxonomy = 'meal-category';
     $meal_post_type = 'meal';
 
     class CPT_MP_Meal
@@ -19,21 +19,20 @@ if (!class_exists('CPT_MP_Meal')) :
         function __construct()
         {
             $this->post_type = 'meal';
+            $this->category = 'meal-category';
 
             add_action('init', array($this, 'meal_init'), 0);
-            add_filter('post_updated_messages', array($this, 'meal_updated_messages'));
             add_action('init', array($this, 'meal_category_inti'), 0);
-            add_action('init', array($this, 'meal_category_change_category_update_count_cb'), 100);
-
+//
             add_filter("manage_{$this->post_type}_posts_columns", array($this, 'set_custom_edit_meal_columns'));
-
+//
             add_action("manage_{$this->post_type}_posts_custom_column", array($this, 'custom_meal_column'), 10, 2);
-
+//
             add_action('admin_init', array($this, 'metabox_init'));
             add_action('save_post', array($this, 'save_meal_cpt_meta'));
-
+//
             add_filter( 'single_template', array($this, 'get_custom_post_type_template') );
-            add_filter( 'category_template', array($this, 'filter_category_template') );
+            add_filter( 'taxonomy_template', array($this, 'filter_category_template') );
 
         }
 
@@ -86,48 +85,9 @@ if (!class_exists('CPT_MP_Meal')) :
                 'exclude_from_search' => false,
                 'rewrite' => true,
                 'query_var' => true,
-                'menu_icon' => 'dashicons-admin-post',
-                'show_in_rest' => true,
-                'rest_base' => 'meal',
-                'rest_controller_class' => 'WP_REST_Posts_Controller',
+                'menu_icon' => 'dashicons-admin-post'
             ));
 
-        }
-
-        /**
-         * Sets the post updated messages for the `meal` post type.
-         *
-         * @param array $messages Post updated messages.
-         * @return array Messages for the `meal` post type.
-         */
-        function meal_updated_messages($messages)
-        {
-            global $post;
-
-            $permalink = get_permalink($post);
-
-            $messages['meal'] = array(
-                0 => '', // Unused. Messages start at index 1.
-                /* translators: %s: post permalink */
-                1 => sprintf(__('Meal updated. <a target="_blank" href="%s">View Meal</a>', 'food-to-prep'), esc_url($permalink)),
-                2 => __('Custom field updated.', 'food-to-prep'),
-                3 => __('Custom field deleted.', 'food-to-prep'),
-                4 => __('Meal updated.', 'food-to-prep'),
-                /* translators: %s: date and time of the revision */
-                5 => isset($_GET['revision']) ? sprintf(__('Meal restored to revision from %s', 'food-to-prep'), wp_post_revision_title((int)$_GET['revision'], false)) : false,
-                /* translators: %s: post permalink */
-                6 => sprintf(__('Meal published. <a href="%s">View Meal</a>', 'food-to-prep'), esc_url($permalink)),
-                7 => __('Meal saved.', 'food-to-prep'),
-                /* translators: %s: post permalink */
-                8 => sprintf(__('Meal submitted. <a target="_blank" href="%s">Preview Meal</a>', 'food-to-prep'), esc_url(add_query_arg('preview', 'true', $permalink))),
-                /* translators: 1: Publish box date format, see https://secure.php.net/date 2: Post permalink */
-                9 => sprintf(__('Meal scheduled for: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview Meal</a>', 'food-to-prep'),
-                    date_i18n(__('M j, Y @ G:i', 'food-to-prep'), strtotime($post->post_date)), esc_url($permalink)),
-                /* translators: %s: post permalink */
-                10 => sprintf(__('Meal draft updated. <a target="_blank" href="%s">Preview Meal</a>', 'food-to-prep'), esc_url(add_query_arg('preview', 'true', $permalink))),
-            );
-
-            return $messages;
         }
 
         /**
@@ -158,54 +118,8 @@ if (!class_exists('CPT_MP_Meal')) :
                 'show_ui' => true,
                 'show_admin_column' => true,
                 'query_var' => true,
-                'public' => true,
-                'rewrite' => true,
-                'publicly_queryable' => true,
-                'show_in_nav_menus' => true,
-                'show_tagcloud' => true,
-                'show_in_rest' => true,
-                'update_count_callback' => array($this, 'meal_category_update_count_cb')
+                'rewrite' => true
             ));
-        }
-
-        /**
-         * Custom update_count_callback
-         * @param array $terms
-         * @param string $taxonomy
-         */
-        function meal_category_update_count_cb($terms = array(), $taxonomy = 'category')
-        {
-            global $wpdb, $taxonomy;
-
-            // select id & count from taxonomy
-            $query = "SELECT term_taxonomy_id, MAX(total) AS total FROM ((
-        SELECT tt.term_taxonomy_id, COUNT(*) AS total FROM $wpdb->term_relationships tr, $wpdb->term_taxonomy tt WHERE tr.term_taxonomy_id = tt.term_taxonomy_id AND tt.taxonomy = %s GROUP BY tt.term_taxonomy_id
-        ) UNION ALL (
-        SELECT term_taxonomy_id, 0 AS total FROM $wpdb->term_taxonomy WHERE taxonomy = %s
-        )) AS unioncount GROUP BY term_taxonomy_id";
-            $rsCount = $wpdb->get_results($wpdb->prepare($query, $taxonomy, $taxonomy));
-            // update all count values from taxonomy
-            foreach ($rsCount as $rowCount) {
-                $wpdb->update($wpdb->term_taxonomy, array('count' => $rowCount->total), array('term_taxonomy_id' => $rowCount->term_taxonomy_id));
-            }
-        }
-
-        /**
-         * Change default update_count_callback for category taxonomy
-         * @action init
-         */
-        function meal_category_change_category_update_count_cb()
-        {
-            global $wp_taxonomies, $taxonomy;
-
-            if ($taxonomy == 'category') {
-                if (!taxonomy_exists('category')) {
-                    return false;
-                }
-
-                $new_arg = &$wp_taxonomies['category']->update_count_callback;
-                $this->meal_category_update_count_cb($new_arg);
-            }
         }
 
         /**
@@ -364,17 +278,14 @@ if (!class_exists('CPT_MP_Meal')) :
             return $single_template;
         }
 
-
         function filter_category_template( $template ) {
 
-            $cat_id = get_query_var('cat');
-            if ($cat_id){
+            if (is_tax($this->category)) {
                 $template = FoodToPrep::template_patch() . 'page-meal-list.php';
             }
 
             return $template;
         }
-
     }
 
     new CPT_MP_Meal();

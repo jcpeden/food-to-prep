@@ -28,7 +28,5 @@ mix
     .sourceMaps(true, 'source-map')
     .options({
         processCssUrls: false
-    })
-    .copy('./assets/simplePagination.css', './assets/css/simplePagination.css')
-    .copy('./assets/scripts/jquery.simplePagination.js', './assets/js/jquery.simplePagination.js');
+    });
 

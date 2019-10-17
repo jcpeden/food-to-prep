@@ -53,24 +53,24 @@ if (array_key_exists('sortby', $_GET)) {
             </ul>
         </div>
     </div>
-    <div id="meal-category-sortby" class="meal-category-sortby">
-        <div class="row">
-            <div class="col-12">
-                <div class="sortby-meal">
-                    <span>Sort By:</span>
-                    <ul>
-                        <li class="sortby-item <?php esc_attr_e(($sort_key == 'a-z') ? 'active' : '', 'food-to-prep'); ?>">
-                            <a href="<?php esc_attr_e(($sort_key == 'a-z') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=a-z', 'food-to-prep'); ?>">A-Z</a>
-                        </li>
-                        <li class="sortby-item <?php esc_attr_e(($sort_key == 'newest') ? 'active' : '', 'food-to-prep'); ?>">
-                            <a href="<?php esc_attr_e(($sort_key == 'newest') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=newest', 'food-to-prep'); ?>">NEWEST</a>
-                        </li>
-                        <li class="sortby-item <?php esc_attr_e(($sort_key == 'oldest') ? 'active' : '', 'food-to-prep'); ?>">
-                            <a href="<?php esc_attr_e(($sort_key == 'oldest') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=oldest', 'food-to-prep'); ?>">OLDEST</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--    <div id="meal-category-sortby" class="meal-category-sortby">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                <div class="sortby-meal">-->
+<!--                    <span>Sort By:</span>-->
+<!--                    <ul>-->
+<!--                        <li class="sortby-item --><?php //esc_attr_e(($sort_key == 'a-z') ? 'active' : '', 'food-to-prep'); ?><!--">-->
+<!--                            <a href="--><?php //esc_attr_e(($sort_key == 'a-z') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=a-z', 'food-to-prep'); ?><!--">A-Z</a>-->
+<!--                        </li>-->
+<!--                        <li class="sortby-item --><?php //esc_attr_e(($sort_key == 'newest') ? 'active' : '', 'food-to-prep'); ?><!--">-->
+<!--                            <a href="--><?php //esc_attr_e(($sort_key == 'newest') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=newest', 'food-to-prep'); ?><!--">NEWEST</a>-->
+<!--                        </li>-->
+<!--                        <li class="sortby-item --><?php //esc_attr_e(($sort_key == 'oldest') ? 'active' : '', 'food-to-prep'); ?><!--">-->
+<!--                            <a href="--><?php //esc_attr_e(($sort_key == 'oldest') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=oldest', 'food-to-prep'); ?><!--">OLDEST</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
