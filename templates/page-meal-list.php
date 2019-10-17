@@ -8,15 +8,9 @@
 get_header();
 
 if (is_page(FTP()->endpoint_menu())) {
+    // Modify main Query
 
-    add_action('pre_get_posts','wpse50761_alter_query');
-    function wpse50761_alter_query($query){
-
-        if( $query->is_main_query() ){
-            //Do something to main query
-        }
-    }
-
+    global $wp_query;
 
     $meal_post_type = 'meal';
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -27,8 +21,9 @@ if (is_page(FTP()->endpoint_menu())) {
         'paged'             => $paged
     );
 
-    query_posts( $args );
+    $wp_query = new WP_Query($args);
 };
+
 
 ?>
 <div class="wrap">
@@ -65,8 +60,8 @@ if (is_page(FTP()->endpoint_menu())) {
 
                         the_posts_pagination( array(
                             'mid_size'  => 2,
-                            'prev_text' => __( 'Back', 'textdomain' ),
-                            'next_text' => __( 'Next', 'textdomain' ),
+                            'prev_text' => __( 'Prev', 'food-to-prep' ),
+                            'next_text' => __( 'Next', 'food-to-prep' ),
                         ) );
 
                         ?>

@@ -350,16 +350,38 @@ add_filter('excerpt_content', function ($content = array('string' => '', 'length
     }
 });
 
-/**
- *
- * Compute pagination page
- *
- * @param array $data ['total' => 0, 'posts_per_page' => 10]
- * @return int $maximum_page
- *
- */
-add_filter('compute_pagination', function ($data = array('total' => 0, 'posts_per_page' => 10)) {
-    $total = array_key_exists('total', $data) ? $data['total'] : $data[0];
-    $posts_per_page = array_key_exists('posts_per_page', $data) ? $data['posts_per_page'] : $data[1];
-    return round($total / $posts_per_page, 0);
-});
+function ftp_prefix_modify_query_order( $query ) {
+    if ( is_main_query() ) {
+
+        /**
+         * Support sortby in menu pages
+         */
+        if ( is_page(FTP()->endpoint_menu()) || is_tax('meal-category')) {
+            $sortby = get_query_var('sortby');
+
+            if (isset($sortby)){
+                $args =  array( 'date' => 'DESC' );
+
+                switch ( $sortby ) {
+                    case 'oldest':
+                        $args = array('date' => 'ASC');
+                        break;
+                    case 'a-z':
+                        $args = array('title' => 'ASC');
+                        break;
+                    default:
+                        $args = array('date' => 'DESC');
+                }
+
+                $query->set( 'orderby', $args );
+            }
+        }
+    }
+}
+add_action( 'pre_get_posts', 'ftp_prefix_modify_query_order' );
+
+add_action('init','ftp_register_param');
+function ftp_register_param() {
+    global $wp;
+    $wp->add_query_var('sortby');
+}

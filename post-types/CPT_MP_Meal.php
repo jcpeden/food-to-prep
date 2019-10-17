@@ -9,12 +9,10 @@ if (!class_exists('CPT_MP_Meal')) :
      * Global variable
      *
      */
-    $taxonomy = 'meal-category';
-    $meal_post_type = 'meal';
-
     class CPT_MP_Meal
     {
         private $post_type;
+        private $category;
 
         function __construct()
         {
@@ -23,14 +21,14 @@ if (!class_exists('CPT_MP_Meal')) :
 
             add_action('init', array($this, 'meal_init'), 0);
             add_action('init', array($this, 'meal_category_inti'), 0);
-//
+
             add_filter("manage_{$this->post_type}_posts_columns", array($this, 'set_custom_edit_meal_columns'));
-//
+
             add_action("manage_{$this->post_type}_posts_custom_column", array($this, 'custom_meal_column'), 10, 2);
-//
+
             add_action('admin_init', array($this, 'metabox_init'));
             add_action('save_post', array($this, 'save_meal_cpt_meta'));
-//
+
             add_filter( 'single_template', array($this, 'get_custom_post_type_template') );
             add_filter( 'taxonomy_template', array($this, 'filter_category_template') );
 
@@ -44,7 +42,8 @@ if (!class_exists('CPT_MP_Meal')) :
          */
         function meal_init()
         {
-            global $meal_post_type;
+            $meal_post_type = $this->post_type;
+
             register_post_type($meal_post_type, array(
                 'labels' => array(
                     'name' => __('Meals', 'food-to-prep'),
@@ -97,7 +96,8 @@ if (!class_exists('CPT_MP_Meal')) :
          */
         function meal_category_inti()
         {
-            global $taxonomy, $meal_post_type;
+            $taxonomy = $this->category;
+            $meal_post_type = $this->post_type;
 
             $labels = array(
                 'name' => __('Meal Categories', 'food-to-prep'),
@@ -130,7 +130,8 @@ if (!class_exists('CPT_MP_Meal')) :
 
         function metabox_init()
         {
-            global $meal_post_type;
+            $meal_post_type = $this->post_type;
+
             add_meta_box("price_meta", "Price", array($this, 'price_meta_cb'), $meal_post_type, "normal", "high");
             add_meta_box("details_meta", "Details", array($this, 'details_meta_cb'), $meal_post_type, "normal", "high");
 

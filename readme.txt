@@ -55,9 +55,10 @@ Please open a support ticket in the forum and we'll deal with your issue as soon
 
 == Changelog ==
 
-= 0.1.8, October 16, 2019 =
+= 0.1.8, October 17, 2019 =
 * Remove dashboard settings page
 * Add hot link support for plugin
+* Refactor menu link, pagination, sortby
 
 = 0.1.7, October 09, 2019 =
 * Fix error gutenberg editor

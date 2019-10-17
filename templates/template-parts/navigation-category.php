@@ -5,7 +5,7 @@
  *
  */
 
-global $taxonomy;
+$taxonomy = 'meal-category';
 
 $category_id = get_query_var('cat');
 
@@ -19,9 +19,9 @@ $args_meal = array(
 $terms_meal = get_terms($args_meal);
 
 $template_uri = home_url( FTP()->endpoint_menu());
-if ($category_id) {
-    $template_sort_uri .= $category_id . '/';
-}
+//if ($category_id) {
+//    $template_sort_uri .= $category_id . '/';
+//}
 
 $param_get = '';
 $sort_key = '';
@@ -53,24 +53,36 @@ if (array_key_exists('sortby', $_GET)) {
             </ul>
         </div>
     </div>
-<!--    <div id="meal-category-sortby" class="meal-category-sortby">-->
-<!--        <div class="row">-->
-<!--            <div class="col-12">-->
-<!--                <div class="sortby-meal">-->
-<!--                    <span>Sort By:</span>-->
-<!--                    <ul>-->
-<!--                        <li class="sortby-item --><?php //esc_attr_e(($sort_key == 'a-z') ? 'active' : '', 'food-to-prep'); ?><!--">-->
-<!--                            <a href="--><?php //esc_attr_e(($sort_key == 'a-z') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=a-z', 'food-to-prep'); ?><!--">A-Z</a>-->
-<!--                        </li>-->
-<!--                        <li class="sortby-item --><?php //esc_attr_e(($sort_key == 'newest') ? 'active' : '', 'food-to-prep'); ?><!--">-->
-<!--                            <a href="--><?php //esc_attr_e(($sort_key == 'newest') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=newest', 'food-to-prep'); ?><!--">NEWEST</a>-->
-<!--                        </li>-->
-<!--                        <li class="sortby-item --><?php //esc_attr_e(($sort_key == 'oldest') ? 'active' : '', 'food-to-prep'); ?><!--">-->
-<!--                            <a href="--><?php //esc_attr_e(($sort_key == 'oldest') ? $template_sort_uri . 'paged/1' : $template_sort_uri . 'paged/1?sortby=oldest', 'food-to-prep'); ?><!--">OLDEST</a>-->
-<!--                        </li>-->
-<!--                    </ul>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
+    <div id="meal-category-sortby" class="meal-category-sortby">
+        <div class="row">
+            <div class="col-12">
+                <div class="sortby-meal">
+                    <span>Sort By:</span>
+                    <ul>
+                        <?php
+                        $keys = array(
+                            'a-z' => 'A-Z',
+                            'newest' => 'NEWEST',
+                            'oldest' => 'OLDEST'
+                        );
+
+                        foreach ($keys as $key => $title){
+
+                            $sortby_url = esc_url(add_query_arg(array(
+                                'sortby' => $key
+                            )));
+
+                            ?>
+                            <li class="sortby-item <?php echo esc_attr(($sort_key == $key) ? 'active' : ''); ?>">
+                                <a href="<?php echo $sortby_url; ?>"><?php echo esc_html($title); ?></a>
+                            </li>
+                            <?php
+                        }
+
+                        ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
