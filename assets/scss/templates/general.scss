@@ -46,42 +46,6 @@ button {
   font-size: 1em;
 }
 
-//button.button {
-//  text-align: center;
-//  background-color: $button-price-color;
-//
-//  &:hover {
-//    background-color: $button-price-color_hover;
-//  }
-//
-//  &:focus {
-//    outline: none;
-//    background-color: $button-price-color_hover;
-//  }
-//
-//  &__add-to-cart {
-//    width: 110px;
-//    height: 48px;
-//    display: flex;
-//    justify-content: center;
-//  }
-//
-//  &--white {
-//    background-color: $white;
-//    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
-//    color: $red;
-//    border: 2px solid $red;
-//    border-radius: 30px;
-//    padding: 0 10px;
-//
-//    &:hover, &:focus {
-//      background-color: $red;
-//      color: $white;
-//      font-weight: bold!important;
-//    }
-//  }
-//}
-
 a:focus, a:active {
   outline: none;
 }
@@ -190,3 +154,4 @@ input.input {
     }
   }
 }
+

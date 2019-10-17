@@ -24,7 +24,8 @@ require_once 'wposa-init.php';
 
 require_once 'mp-template-functions.php';
 
-require_once 'includes/payments/MP_Check_Gateway.php';
+//Remove Test Payments
+//require_once 'includes/payments/MP_Check_Gateway.php';
 require_once 'includes/payments/MP_PayPal_Gateway.php';
 
 

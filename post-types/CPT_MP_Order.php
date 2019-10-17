@@ -13,7 +13,7 @@ if (!class_exists('CPT_MP_Order')) :
             $this->post_type = 'mp-order';
 
             add_action('init', array($this, 'mp_order_init'));
-            add_action('admin_menu', array($this, 'my_cpt_admin_submenu'), 30);
+//            add_action('admin_menu', array($this, 'my_cpt_admin_submenu'), 30);
 
             add_action('add_meta_boxes', array($this, 'adding_custom_meta_boxes1'));
 
@@ -90,12 +90,12 @@ if (!class_exists('CPT_MP_Order')) :
             }
         }
 
-        function my_cpt_admin_submenu()
-        {
-
-            $cpt = 'mp-order';
-
-            $cpt_obj = get_post_type_object($cpt);
+//        function my_cpt_admin_submenu()
+//        {
+//
+//            $cpt = 'mp-order';
+//
+//            $cpt_obj = get_post_type_object($cpt);
 
 
 //            add_submenu_page(
@@ -105,7 +105,7 @@ if (!class_exists('CPT_MP_Order')) :
 //                $cpt_obj->cap->edit_posts,         // capability
 //                'edit.php?post_type=' . $cpt       // menu slug
 //            );
-        }
+//        }
 
 
         function adding_custom_meta_boxes1($post)

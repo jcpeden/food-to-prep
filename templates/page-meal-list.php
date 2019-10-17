@@ -34,7 +34,7 @@ if (is_page(FTP()->endpoint_menu())) {
 
             <div id="meal-content-filter" class="meal-content-filter">
 
-                <div class="container section">
+                <section class=section">
                     <div class="row">
                         <div class="col-12">
                             <div class="grid grid-gallery">
@@ -51,9 +51,9 @@ if (is_page(FTP()->endpoint_menu())) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-            <div class="container">
+            <section>
                 <div class="row">
                     <div class="col-12">
                         <?php
@@ -67,7 +67,7 @@ if (is_page(FTP()->endpoint_menu())) {
                         ?>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 </div>

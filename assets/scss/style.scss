@@ -27,6 +27,12 @@
     
 }
 
+@media screen and (max-width: $xs-breakpoint) {
+    .no-wc-breadcrumb .site-header {
+        margin-bottom: 1em !important;
+    }
+}
+
 #checkout-content {
     .label {
         display: block;

@@ -1,5 +1,4 @@
 .checkout-page {
-    
     .table-your-order {
         margin-bottom: 2.5em;
         
@@ -24,20 +23,20 @@
                 list-style: none;
                 margin-left: 0;
             }
-
+            
             .payment-input {
                 display: flex;
                 flex-flow: row;
                 align-items: center;
-    
+                
                 padding: 1.4em;
                 background-color: $table-header-color;
             }
             
-            .payment-description{
+            .payment-description {
                 padding: 1.4em;
                 background-color: #fafafa;
-                color: rgba(0,0,0,0.5);
+                color: rgba(0, 0, 0, 0.5);
                 
                 display: none;
             }
@@ -58,6 +57,18 @@
         
         .billing-info {
             margin-bottom: 1.5em;
+        }
+    }
+}
+
+@media screen and (max-width: 669px) {
+    .checkout-page {
+        #checkout-content {
+            margin-top: 1em;
+            
+            .billing-info {
+                margin-bottom: 0.5em;
+            }
         }
     }
 }

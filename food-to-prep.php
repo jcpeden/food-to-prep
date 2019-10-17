@@ -7,15 +7,13 @@
  * Author URI:      http://www.tweakdigital.co.uk/
  * Text Domain:     food-to-prep
  * Domain Path:     /languages
- * Version:         0.1.8
+ * Version:         0.1.9
  *
  * @package         Meal_Prep
  */
 
 require_once 'autoload.php';
 require_once 'vendor/autoload.php';
-
-//return false;
 
 class FoodToPrep
 {

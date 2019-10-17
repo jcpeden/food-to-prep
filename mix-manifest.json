@@ -8,7 +8,5 @@
     "/assets/css/style.min.css.map": "/assets/css/style.min.css.map",
     "/assets/js/grid-gallery.min.js": "/assets/js/grid-gallery.min.js",
     "/assets/js/add-to-cart.min.js": "/assets/js/add-to-cart.min.js",
-    "/assets/js/admin/order-detail.min.js": "/assets/js/admin/order-detail.min.js",
-    "/assets/css/simplePagination.css": "/assets/css/simplePagination.css",
-    "/assets/js/jquery.simplePagination.js": "/assets/js/jquery.simplePagination.js"
+    "/assets/js/admin/order-detail.min.js": "/assets/js/admin/order-detail.min.js"
 }
