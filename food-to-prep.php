@@ -45,11 +45,13 @@ class FoodToPrep
         return dirname(__FILE__) . '/templates/';
     }
 
-    public static function plugin_asset_url(){
+    public static function plugin_asset_url()
+    {
         return plugin_dir_url(__FILE__) . 'assets';
     }
 
-    public static function plugin_version(){
+    public static function plugin_version()
+    {
         if (!function_exists('get_plugin_data')) {
             require_once ABSPATH . 'wp-admin/includes/plugin.php';
         }
@@ -96,7 +98,7 @@ class FoodToPrep
     private function __construct()
     {
         add_action('init', array($this, 'register_assets_plugin'));
-        add_filter( 'plugin_row_meta', array($this, 'support_and_faq_links'), 10, 4 );
+        add_filter('plugin_row_meta', array($this, 'support_and_faq_links'), 10, 4);
 
 
         add_filter('page_template', array($this, 'custom_page_template'));
@@ -117,7 +119,6 @@ class FoodToPrep
     }
 
 
-
     function register_assets_plugin()
     {
         if (is_admin()) {
@@ -128,10 +129,8 @@ class FoodToPrep
 
             wp_enqueue_style('food-prep-boostrap', FoodToPrep::plugin_asset_url() . '/libs/bootstrap-4.3.1/css/bootstrap.min.css', '', null);
             wp_enqueue_style('food-prep-plugin-style', FoodToPrep::plugin_asset_url() . '/css/style.min.css', '', FoodToPrep::plugin_version());
-//            wp_enqueue_style('food-prep-pagination', FoodToPrep::plugin_asset_url() . '/css/simplePagination.css', '', FoodToPrep::plugin_version());
 
             wp_enqueue_script('food-prep-boostrap-script', FoodToPrep::plugin_asset_url() . '/libs/bootstrap-4.3.1/js/bootstrap.min.js', array('jquery'), null, true);
-//            wp_enqueue_script('food-prep-isotope-gallery', FoodToPrep::plugin_asset_url() . '/libs/isotope-3.0.6/isotope.pkgd.min.js', array('jquery'), null, true);
             wp_enqueue_script('food-prep-grid-gallery', FoodToPrep::plugin_asset_url() . '/js/grid-gallery.min.js', array('jquery'), FoodToPrep::plugin_version(), true);
             wp_enqueue_script('food-prep-add-to-cart', FoodToPrep::plugin_asset_url() . '/js/add-to-cart.min.js', array('jquery'), FoodToPrep::plugin_version(), true);
 
@@ -140,8 +139,6 @@ class FoodToPrep
                     'ajax_url' => admin_url('admin-ajax.php'),
                     'mp_ajax_url' => apply_filters('mp_ajax_endpoint', array())
                 ));
-
-//            wp_enqueue_script('pagination-script', FoodToPrep::plugin_asset_url() . '/js/jquery.simplePagination.js', array('jquery'), FoodToPrep::plugin_version(), true);
         }
     }
 
@@ -189,7 +186,8 @@ class FoodToPrep
      * Food list endpoint.
      * @return string
      */
-    function endpoint_menu(){
+    function endpoint_menu()
+    {
         return MTP_OSA()->get_option('endpoint_meal_list', 'meal_prep_other');
     }
 
@@ -290,7 +288,7 @@ class FoodToPrep
 
     function support_and_faq_links($links_array, $plugin_file_name, $plugin_data, $status)
     {
-        if (strpos($plugin_file_name, basename(__FILE__))){
+        if (strpos($plugin_file_name, basename(__FILE__))) {
             // you can still use array_unshift() to add links at the beginning
             $links_array[] = '<a href="https://wordpress.org/support/plugin/food-to-prep/" target="_blank">Support</a>';
         }
@@ -348,19 +346,20 @@ add_filter('excerpt_content', function ($content = array('string' => '', 'length
     }
 });
 
-function ftp_prefix_modify_query_order( $query ) {
-    if ( is_main_query() ) {
+function ftp_prefix_modify_query_order($query)
+{
+    if (is_main_query()) {
 
         /**
          * Support sortby in menu pages
          */
-        if ( is_page(FTP()->endpoint_menu()) || is_tax('meal-category')) {
+        if (is_page(FTP()->endpoint_menu()) || is_tax('meal-category')) {
             $sortby = get_query_var('sortby');
 
-            if (isset($sortby)){
-                $args =  array( 'date' => 'DESC' );
+            if (isset($sortby)) {
+                $args = array('date' => 'DESC');
 
-                switch ( $sortby ) {
+                switch ($sortby) {
                     case 'oldest':
                         $args = array('date' => 'ASC');
                         break;
@@ -371,15 +370,17 @@ function ftp_prefix_modify_query_order( $query ) {
                         $args = array('date' => 'DESC');
                 }
 
-                $query->set( 'orderby', $args );
+                $query->set('orderby', $args);
             }
         }
     }
 }
-add_action( 'pre_get_posts', 'ftp_prefix_modify_query_order' );
 
-add_action('init','ftp_register_param');
-function ftp_register_param() {
+add_action('pre_get_posts', 'ftp_prefix_modify_query_order');
+
+add_action('init', 'ftp_register_param');
+function ftp_register_param()
+{
     global $wp;
     $wp->add_query_var('sortby');
 }
