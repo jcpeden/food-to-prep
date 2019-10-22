@@ -1,42 +1,24 @@
 #meal-detail {
 
-  .meal-detail {
-
-    &__title {
-      margin-bottom: 2.5em;
-    }
-
-    &__price {
-      margin-bottom: 1.5em;
-    }
-  }
-
   .meal-item {
     &__add-to-cart {
-      display: flex;
-      margin-top: 16px;
-      margin-bottom: 30px;
-      position: relative;
-
-      .meal-item-quantity {
-        width: 80px;
-        padding-right: 10px;
-
-        .input-quantity {
-          width: 100%;
-          text-align: center;
-          box-shadow: none;
-          padding-left: 20px;
-
-          &.has-error {
-            outline: 1px solid $red;
-          }
+      text-align: center;
+      
+      .meal-item-quantity{
+        width: 100%;
+        
+        .input-quantity{
+          width: 80px;
         }
       }
-
+      
       .button {
-        width: 150px;
+        width: 100%;
       }
     }
+  }
+  
+  .meal-detail__more-info{
+    margin-bottom: 40px;
   }
 }

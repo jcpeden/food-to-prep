@@ -5,14 +5,14 @@
     @import "templates/general";
     
     //mobile
-    @import "templates/mobile/meal-list-page";
-    @import "templates/mobile/meal-detail-page";
-    @import "templates/mobile/cart-page";
-    @import "templates/mobile/checkout-page";
+    @import "templates/all/meal-list-page";
+    @import "templates/all/meal-detail-page";
+    @import "templates/all/cart-page";
+    @import "templates/all/checkout-page";
     
-    @import "templates/mobile/template_parts/grid-gallery";
-    @import "templates/mobile/template_parts/navigation-category";
-    @import "templates/mobile/template_parts/post-navigation";
+    @import "templates/all/template_parts/grid-gallery";
+    @import "templates/all/template_parts/navigation-category";
+    @import "templates/all/template_parts/post-navigation";
     
     
     //tablet
@@ -22,14 +22,18 @@
     
     //desktop
     @media (min-width: 992px) {
-    
+        
     }
     
+    @media (max-width: 768px) {
+        @import "templates/mobile/template_parts/grid-gallery";
+        @import "templates/mobile/meal-detail-page";
+    }
 }
 
 @media screen and (max-width: $xs-breakpoint) {
     .no-wc-breadcrumb .site-header {
-        margin-bottom: 1em !important;
+        margin-bottom: 0 !important;
     }
 }
 
@@ -44,13 +48,7 @@
     }
 }
 
-.float-mini-cart {
-    position: relative;
-    float: right;
-    width: 21.7391304348%;
-    
-    height: 67px;
-}
+
 
 .meal-item__mini-cart {
     height: 100%;
@@ -126,19 +124,6 @@
     }
 }
 
-#site-navigation {
-    width: 73.9130434783%;
-    float: left;
-    margin-right: 4.347826087%;
-    clear: both;
-}
-
-#masthead {
-    .col-full {
-        position: relative;
-    }
-}
-
 .checkout-errors {
     margin-bottom: 30px;
 }
@@ -149,4 +134,23 @@
     color: white;
     
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: $sm-breakpoint) {
+    .meal-item__mini-cart {
+        .mini-cart-box{
+            span{
+                display: none;
+            }
+        }
+    }
+    
+    .meal-item__mini-cart{
+        &:hover {
+            .widget-cart {
+                display: none;
+            }
+        }
+    }
+    
 }

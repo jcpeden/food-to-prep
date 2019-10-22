@@ -18,13 +18,10 @@ mix
     .combine(['assets/scripts/add-to-cart.js', 'assets/scripts/cart-page.js', 'assets/scripts/checkout.js'], 'assets/js/add-to-cart.min.js')
     .combine('assets/scripts/admin/order-detail.js', 'assets/js/admin/order-detail.min.js')
     .sass('assets/scss/admin.style.scss', 'assets/css/admin.style.min.css')
+    .sass('assets/scss/storefront.scss', 'assets/css/storefront.min.css')
     .sass('assets/scss/email_templates/css.scss', 'templates/emails/css.css')
     .sass('assets/scss/style.scss', 'assets/css/style.min.css')
-    .polyfill({
-        enabled: true,
-        useBuiltIns: "usage",
-        targets: {"firefox": "50", "ie": 10}
-    })
+    .setPublicPath('assets')
     .sourceMaps(true, 'source-map')
     .options({
         processCssUrls: false

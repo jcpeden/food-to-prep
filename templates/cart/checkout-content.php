@@ -11,8 +11,8 @@
             foreach (FTP()->cart->get_cart() as $item) {
                 ?>
                 <tr>
-                    <td><?php esc_attr_e($item->name, 'food-to-prep' ); ?><b> × <?php esc_attr_e($item->quality, 'food-to-prep') ?></b></td>
-                    <td><?php esc_attr_e( FTP()->get_format_currency(number_format(($item->quality * $item->price), 2)), 'food-to-prep'); ?></td>
+                    <td><?php echo esc_html($item->name) ?><b> × <?php echo esc_html($item->quality) ?></b></td>
+                    <td><?php echo esc_html( FTP()->get_format_currency(number_format(($item->quality * $item->price), 2))); ?></td>
                 </tr>
                 <?php
             }
@@ -22,11 +22,11 @@
         <tfoot>
         <tr class="cart-subtotal">
             <th><?php esc_html_e('Subtotal', 'food-to-prep'); ?></th>
-            <td><?php esc_attr_e(FTP()->cart->get_formated_cart_subtotal(), 'food-to-prep'); ?></td>
+            <td><?php echo esc_html(FTP()->cart->get_formated_cart_subtotal()); ?></td>
         </tr>
         <tr class="cart-total">
             <th><?php esc_html_e('Total', 'food-to-prep'); ?></th>
-            <td class="cart-total__amount"><?php esc_attr_e(FTP()->cart->get_formated_cart_total(), 'food-to-prep'); ?></td>
+            <td class="cart-total__amount"><?php echo esc_html(FTP()->cart->get_formated_cart_total()); ?></td>
         </tr>
         </tfoot>
     </table>
@@ -42,12 +42,12 @@
             ?>
             <li>
                 <div class="payment-input">
-                    <input id="<?php esc_attr_e($method->id, 'food-to-prep'); ?>" name="payment_method" type="radio" class="input-radio" value="<?php esc_attr_e($method->id, 'food-to-prep'); ?>"/>
-                    <label for="<?php esc_attr_e($method->id, 'food-to-prep'); ?>">
-                        <?php esc_html_e($method->method_title, 'food-to-prep'); ?>
+                    <input id="<?php echo esc_attr($method->id); ?>" name="payment_method" type="radio" class="input-radio" value="<?php echo esc_attr($method->id); ?>"/>
+                    <label for="<?php echo esc_attr($method->id); ?>">
+                        <?php echo esc_html($method->method_title); ?>
                     </label>
                 </div>
-                <div class="payment-description"><?php esc_html_e($method->description, 'food-to-prep'); ?></div>
+                <div class="payment-description"><?php echo esc_html($method->description); ?></div>
             </li>
             <?php
         }
@@ -57,6 +57,6 @@
 
     </ul>
     <div class="place-order">
-        <input class="button button__place-order" type="submit" value="Place order" />
+        <input class="button button__place-order" type="submit" value="<?php echo esc_attr('Place order') ?>" />
     </div>
 </div>

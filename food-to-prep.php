@@ -7,7 +7,7 @@
  * Author URI:      http://www.tweakdigital.co.uk/
  * Text Domain:     food-to-prep
  * Domain Path:     /languages
- * Version:         0.1.10
+ * Version:         0.1.11
  *
  * @package         Meal_Prep
  */
@@ -129,6 +129,8 @@ class FoodToPrep
 
             wp_enqueue_style('food-prep-boostrap', FoodToPrep::plugin_asset_url() . '/libs/bootstrap-4.3.1/css/bootstrap.min.css', '', null);
             wp_enqueue_style('food-prep-plugin-style', FoodToPrep::plugin_asset_url() . '/css/style.min.css', '', FoodToPrep::plugin_version());
+
+            wp_enqueue_style('ftp-storefront', FoodToPrep::plugin_asset_url() . '/css/storefront.min.css', '', FoodToPrep::plugin_version());
 
             wp_enqueue_script('food-prep-boostrap-script', FoodToPrep::plugin_asset_url() . '/libs/bootstrap-4.3.1/js/bootstrap.min.js', array('jquery'), null, true);
             wp_enqueue_script('food-prep-grid-gallery', FoodToPrep::plugin_asset_url() . '/js/grid-gallery.min.js', array('jquery'), FoodToPrep::plugin_version(), true);
