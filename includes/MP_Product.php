@@ -59,9 +59,9 @@ if (!class_exists('MP_Product')) :
             return $this->post->post_name;
         }
 
-        public function get_photo()
+        public function get_photo($size = 'post-thumbnail')
         {
-            return get_the_post_thumbnail_url($this->post->ID, 'post-thumbnail');
+            return get_the_post_thumbnail_url($this->post->ID, $size);
         }
 
         public function get_photo_thumbnail()

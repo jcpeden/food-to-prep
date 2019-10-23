@@ -1,35 +1,29 @@
 #cart-content {
-  table {
-    tr {
-      th, td {
-        display: table-cell;
-        vertical-align:middle;
-      }
-
-      .product-remove {
-        max-width: 30px;
-      }
-
-      .product-thumbnail {
-        max-width: 80px;
-        img {
-          margin: auto;
+    table {
+        tr {
+            .product-thumbnail {
+                max-width: unset;
+            }
         }
-      }
     }
-  }
+}
 
-  .table-cart-totals {
-    .cart-subtotal, .cart-total {
-      &__title {
-        font-size: 1em;
-      }
+.ftp-table-responsive {
+    thead{
+        display: none;
     }
-
-    .cart-total {
-      &__amount {
-        font-weight: bold;
-      }
+    
+    tr {
+        td {
+            display: block !important;
+            text-align: right;
+            clear: both;
+            
+            &[data-title]:before{
+                content: attr(data-title) ": ";
+                font-weight: 600;
+                float: left;
+            }
+        }
     }
-  }
 }

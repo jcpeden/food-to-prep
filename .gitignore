@@ -1,2 +1,4 @@
 package-lock.json
 node_modules
+mix.js.map
+mix-manifest.json
