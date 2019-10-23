@@ -1,4 +1,4 @@
-<table class="meal-prep-cart__contents">
+<table class="meal-prep-cart__contents ftp-table-responsive">
     <thead>
     <tr>
         <!--            <th class="product-remove">--><?php //esc_html_e(''); ?><!--</th>-->
@@ -21,10 +21,10 @@
                              src="<?php echo esc_url($item->photo); ?>"/>
                     </a>
                 </td>
-                <td class="product-title"><a
-                        href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->name); ?></a></td>
-                <td class="product-price"><?php echo esc_html(FTP()->get_format_currency($item->price)) ?></td>
-                <td class="product-quantity"><?php echo esc_html($item->quality); ?></td>
+                <td class="product-title" data-title="<?php esc_html_e('Product', 'food-to-prep'); ?>">
+                    <a href="<?php echo esc_url($item->url); ?>"><?php echo esc_html($item->name); ?></a></td>
+                <td class="product-price" data-title="<?php esc_html_e('Price', 'food-to-prep'); ?>"><?php echo esc_html(FTP()->get_format_currency($item->price)) ?></td>
+                <td class="product-quantity" data-title="<?php esc_html_e('Quantity', 'food-to-prep'); ?>"><?php echo esc_html($item->quality); ?></td>
             </tr>
             <?php
         }

@@ -1,0 +1,29 @@
+#cart-content {
+    table {
+        tr {
+            .product-thumbnail {
+                max-width: unset;
+            }
+        }
+    }
+}
+
+.ftp-table-responsive {
+    thead{
+        display: none;
+    }
+    
+    tr {
+        td {
+            display: block !important;
+            text-align: right;
+            clear: both;
+            
+            &[data-title]:before{
+                content: attr(data-title) ": ";
+                font-weight: 600;
+                float: left;
+            }
+        }
+    }
+}
