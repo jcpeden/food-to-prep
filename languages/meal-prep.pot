@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/food-to-prep\n"
-"POT-Creation-Date: 2019-10-23 09:03:48+00:00\n"
+"POT-Creation-Date: 2019-10-23 09:53:46+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -481,84 +481,72 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: wposa-init.php:16
-msgid "PayPal Settings"
-msgstr ""
-
-#: wposa-init.php:23
+#: wposa-init.php:17
 msgid "General Settings"
 msgstr ""
 
-#: wposa-init.php:33
+#: wposa-init.php:25
+msgid "PayPal Settings"
+msgstr ""
+
+#: wposa-init.php:35
 msgid "Client ID"
 msgstr ""
 
-#: wposa-init.php:34
+#: wposa-init.php:36
 msgid "PayPal Client ID"
 msgstr ""
 
-#: wposa-init.php:45
+#: wposa-init.php:47
 msgid "Client Secret"
 msgstr ""
 
-#: wposa-init.php:46
+#: wposa-init.php:48
 msgid "PayPal Client Secret ID"
 msgstr ""
 
-#: wposa-init.php:57
+#: wposa-init.php:59
 msgid "Enable Sandbox Mode"
 msgstr ""
 
-#: wposa-init.php:58
+#: wposa-init.php:60
 msgid "Enable PayPal sandbox to test payments."
 msgstr ""
 
-#: wposa-init.php:76
+#: wposa-init.php:78
 msgid "Menu"
 msgstr ""
 
-#: wposa-init.php:77
-msgid "Page content for Menu page. This display list food."
+#: wposa-init.php:79
+msgid "Content for Menu page. This page will displays the food list."
 msgstr ""
 
-#: wposa-init.php:89
+#: wposa-init.php:91
 msgid "Order Confirmation Page"
 msgstr ""
 
-#: wposa-init.php:90
-msgid "Redirect the user to this page after they purchase. payment success."
+#: wposa-init.php:92
+msgid "Redirect users to this page after they finish their orders."
 msgstr ""
 
-#: wposa-init.php:101
+#: wposa-init.php:103
 msgid "Cart Page"
 msgstr ""
 
-#: wposa-init.php:102
-msgid "Display the user's shopping cart on this page."
-msgstr ""
-
-#: wposa-init.php:113
+#: wposa-init.php:114
 msgid "Checkout Page"
 msgstr ""
 
-#: wposa-init.php:114
-msgid "Display the checkout on this page."
-msgstr ""
-
 #: wposa-init.php:125
-msgid "Order Review Page"
+msgid "Settings"
 msgstr ""
 
-#: wposa-init.php:147
-msgid "Meals Per Page"
-msgstr ""
-
-#: wposa-init.php:164
+#: wposa-init.php:141
 msgid "Currency"
 msgstr ""
 
-#: wposa-init.php:165
-msgid "Which currency would you like to run your shop in?."
+#: wposa-init.php:142
+msgid "Choose the currency to be displayed for your website."
 msgstr ""
 
 #: food-to-prep.php:227
