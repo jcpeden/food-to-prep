@@ -210,7 +210,7 @@ class FoodToPrep
 
     function endpoint_revice_order()
     {
-        return MTP_OSA()->get_option('endpoint_revice_order', 'meal_prep_other');
+        return 'meal-revice-revice';
     }
 
 

@@ -76,7 +76,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'endpoint_meal_list',
             'type'    => 'select',
             'name'    => __( 'Menu', 'food-to-prep' ),
-            'desc'    => __( 'Page content for Menu page. This display list food.', 'food-to-prep' ),
+            'desc'    => __( 'Content for Menu page. This page will displays the food list.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
@@ -89,7 +89,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'endpoint_thankyou',
             'type'    => 'select',
             'name'    => __( 'Order Confirmation Page', 'food-to-prep' ),
-            'desc'    => __( 'Redirect the user to this page after they purchase. payment success.', 'food-to-prep' ),
+            'desc'    => __( 'Redirect users to this page after they finish their orders.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
@@ -101,7 +101,6 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'endpoint_cart',
             'type'    => 'select',
             'name'    => __( 'Cart Page', 'food-to-prep' ),
-            'desc'    => __( 'Display the user\'s shopping cart on this page.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
@@ -113,22 +112,9 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'endpoint_checkout',
             'type'    => 'select',
             'name'    => __( 'Checkout Page', 'food-to-prep' ),
-            'desc'    => __( 'Display the checkout on this page.', 'food-to-prep' ),
             'options' => $page_options
         )
     );
-
-    // Field: Endpoint revice order.
-    MTP_OSA()->add_field(
-        'meal_prep_other',
-        array(
-            'id'      => 'endpoint_revice_order',
-            'type'    => 'text',
-            'name'    => __( 'Order Review Page', 'food-to-prep' ),
-            'default' => 'meal-revice-revice',
-        )
-    );
-
 
     // Field: Thanks you page.
     MTP_OSA()->add_field(
@@ -153,7 +139,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'currency',
             'type'    => 'select',
             'name'    => __( 'Currency', 'food-to-prep' ),
-            'desc'    => __( 'Which currency would you like to run your shop in?.', 'food-to-prep' ),
+            'desc'    => __( 'Choose the currency to be displayed for your website.', 'food-to-prep' ),
             'options' => $currency_support
         )
     );
