@@ -21,6 +21,8 @@ require_once 'includes/db/db-init.php';
 require_once 'class-wp-osa.php';
 require_once 'wposa-init.php';
 
+require_once 'admin/admin-support.php';
+
 
 require_once 'mp-template-functions.php';
 
