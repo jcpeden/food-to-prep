@@ -9,18 +9,20 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
      *
      * Object for the class `MTP_Dashboard_Settings`.
      */
-    // Section: Basic Settings.
-    MTP_OSA()->add_section(
-        array(
-            'id'    => 'meal_prep_paypal_express',
-            'title' => __( 'PayPal Settings', 'food-to-prep' ),
-        )
-    );
+
     // Section: General Settings.
     MTP_OSA()->add_section(
         array(
             'id'    => 'meal_prep_other',
             'title' => __( 'General Settings', 'food-to-prep' ),
+        )
+    );
+
+    // Section: Payment Settings.
+    MTP_OSA()->add_section(
+        array(
+            'id'    => 'meal_prep_paypal_express',
+            'title' => __( 'PayPal Settings', 'food-to-prep' ),
         )
     );
 
@@ -135,17 +137,6 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
             'id'      => 'title',
             'type'    => 'title',
             'name'    => '<h3>Settings</h3>',
-        )
-    );
-
-    // Field: Client ID
-    MTP_OSA()->add_field(
-        'meal_prep_other',
-        array(
-            'id'      => 'post_per_page',
-            'type'    => 'number',
-            'name'    => __( 'Meals Per Page', 'food-to-prep' ),
-            'default' => '3',
         )
     );
 

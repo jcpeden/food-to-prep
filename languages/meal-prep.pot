@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/food-to-prep\n"
-"POT-Creation-Date: 2019-10-17 09:17:54+00:00\n"
+"POT-Creation-Date: 2019-10-23 09:03:48+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,25 +32,25 @@ msgstr ""
 msgid "Choose Image"
 msgstr ""
 
-#: food-to-prep.php:230
+#: food-to-prep.php:232
 msgid "Pending payment <span class=\"count\">(%s)</span>"
 msgid_plural "Pending payment <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: food-to-prep.php:238
+#: food-to-prep.php:240
 msgid "Processing <span class=\"count\">(%s)</span>"
 msgid_plural "Processing <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: food-to-prep.php:246
+#: food-to-prep.php:248
 msgid "Cancelled <span class=\"count\">(%s)</span>"
 msgid_plural "Cancelled <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: food-to-prep.php:254
+#: food-to-prep.php:256
 msgid "Completed <span class=\"count\">(%s)</span>"
 msgid_plural "Completed <span class=\"count\">(%s)</span>"
 msgstr[0] ""
@@ -219,6 +219,7 @@ msgid "Special Price"
 msgstr ""
 
 #: post-types/CPT_MP_Meal.php:208 templates/cart/cart-content.php:8
+#: templates/cart/cart-content.php:27
 #: templates/emails/customer-new-order.php:17
 msgid "Quantity"
 msgstr ""
@@ -228,6 +229,7 @@ msgid "Unit"
 msgstr ""
 
 #: post-types/CPT_MP_Meal.php:248 templates/cart/cart-content.php:7
+#: templates/cart/cart-content.php:26
 #: templates/emails/customer-new-order.php:18
 msgid "Price"
 msgstr ""
@@ -377,7 +379,7 @@ msgid "Customer provided note"
 msgstr ""
 
 #: post-types/CPT_MP_Order.php:305 post-types/CPT_MP_Order.php:317
-#: templates/cart/cart-content.php:50 templates/cart/checkout-content.php:6
+#: templates/cart/cart-content.php:48 templates/cart/checkout-content.php:6
 #: templates/cart/checkout-content.php:28
 #: templates/emails/customer-new-order.php:49
 msgid "Total"
@@ -395,20 +397,21 @@ msgstr ""
 msgid "Add"
 msgstr ""
 
-#: templates/cart/cart-content.php:6 templates/cart/checkout-content.php:5
+#: templates/cart/cart-content.php:6 templates/cart/cart-content.php:24
+#: templates/cart/checkout-content.php:5
 #: templates/emails/customer-new-order.php:16
 msgid "Product"
 msgstr ""
 
-#: templates/cart/cart-content.php:41
+#: templates/cart/cart-content.php:39
 msgid "Cart totals"
 msgstr ""
 
-#: templates/cart/cart-content.php:46 templates/cart/checkout-content.php:24
+#: templates/cart/cart-content.php:44 templates/cart/checkout-content.php:24
 msgid "Subtotal"
 msgstr ""
 
-#: templates/cart/cart-content.php:57
+#: templates/cart/cart-content.php:56
 msgid "Proceed to checkout"
 msgstr ""
 
@@ -558,22 +561,22 @@ msgstr ""
 msgid "Which currency would you like to run your shop in?."
 msgstr ""
 
-#: food-to-prep.php:225
+#: food-to-prep.php:227
 msgctxt "Order status"
 msgid "Pending payment"
 msgstr ""
 
-#: food-to-prep.php:233
+#: food-to-prep.php:235
 msgctxt "Order status"
 msgid "Processing"
 msgstr ""
 
-#: food-to-prep.php:241
+#: food-to-prep.php:243
 msgctxt "Order status"
 msgid "Cancelled"
 msgstr ""
 
-#: food-to-prep.php:249
+#: food-to-prep.php:251
 msgctxt "Order status"
 msgid "Completed"
 msgstr ""

@@ -55,6 +55,10 @@ Please open a support ticket in the forum and we'll deal with your issue as soon
 
 == Changelog ==
 
+= 0.1.11, October 23, 2019 =
+* Update reponsive
+* Add support forum
+
 = 0.1.10, October 17, 2019 =
 * Update reponsive
 * Remove test payment

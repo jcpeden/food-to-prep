@@ -7,7 +7,6 @@ if (!class_exists('MP_Setting')) :
     class MP_Setting
     {
         private $settings_default = array(
-            'post_per_page' => '3',
             'currency' => 'USD'
         );
 
@@ -34,11 +33,6 @@ if (!class_exists('MP_Setting')) :
         public function get_settings()
         {
             return isset($this->settings) ? $this->settings : $this->settings_default;
-        }
-
-        public function get_post_per_page()
-        {
-            return isset($this->settings['post_per_page']) ? $this->settings['post_per_page'] : $this->settings_default['post_per_page'];
         }
 
         public function get_currency_symbol()
