@@ -1,6 +1,6 @@
 {
   "name": "food-to-prep",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "Gruntfile.js",
   "author": "Tweak Digital",
   "scripts": {
