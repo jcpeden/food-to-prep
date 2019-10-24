@@ -122,7 +122,7 @@ if ( class_exists('MTP_Dashboard_Settings') ) {
         array(
             'id'      => 'title',
             'type'    => 'title',
-            'name'    => '<h3>'. esc_html_e('Settings', 'food-to-prep') .'</h3>',
+            'name'    => '<h3>'. __('Settings', 'food-to-prep') .'</h3>',
         )
     );
 

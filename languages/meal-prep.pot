@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/food-to-prep\n"
-"POT-Creation-Date: 2019-10-23 09:53:46+00:00\n"
+"POT-Creation-Date: 2019-10-24 03:30:44+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,6 +23,18 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
+
+#: admin/admin-support.php:26
+msgid "Supports"
+msgstr ""
+
+#: admin/admin-support.php:28
+msgid "Technical support for clients is available via plugin"
+msgstr ""
+
+#: admin/admin-support.php:28
+msgid "forum"
+msgstr ""
 
 #: class-wp-osa.php:509
 msgid "Choose File"
@@ -90,145 +102,145 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:49 post-types/CPT_MP_Meal.php:73
+#: post-types/CPT_MP_Meal.php:50 post-types/CPT_MP_Meal.php:74
 msgid "Meals"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:50
+#: post-types/CPT_MP_Meal.php:51
 msgid "Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:51
+#: post-types/CPT_MP_Meal.php:52
 msgid "All Meals"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:52
+#: post-types/CPT_MP_Meal.php:53
 msgid "Meal Archives"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:53
+#: post-types/CPT_MP_Meal.php:54
 msgid "Meal Attributes"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:54
+#: post-types/CPT_MP_Meal.php:55
 msgid "Insert into Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:55
+#: post-types/CPT_MP_Meal.php:56
 msgid "Uploaded to this Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:60
+#: post-types/CPT_MP_Meal.php:61
 msgid "Filter Meals list"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:61
+#: post-types/CPT_MP_Meal.php:62
 msgid "Meals list navigation"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:62
+#: post-types/CPT_MP_Meal.php:63
 msgid "Meals list"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:63
+#: post-types/CPT_MP_Meal.php:64
 msgid "New Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:64 post-types/CPT_MP_Order.php:56
+#: post-types/CPT_MP_Meal.php:65 post-types/CPT_MP_Order.php:56
 msgid "Add New"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:65
+#: post-types/CPT_MP_Meal.php:66
 msgid "Add New Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:66
+#: post-types/CPT_MP_Meal.php:67
 msgid "Edit Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:67
+#: post-types/CPT_MP_Meal.php:68
 msgid "View Meal"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:68
+#: post-types/CPT_MP_Meal.php:69
 msgid "View Meals"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:69
+#: post-types/CPT_MP_Meal.php:70
 msgid "Search Meals"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:70
+#: post-types/CPT_MP_Meal.php:71
 msgid "No Meals found"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:71
+#: post-types/CPT_MP_Meal.php:72
 msgid "No Meals found in trash"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:72
+#: post-types/CPT_MP_Meal.php:73
 msgid "Parent Meal:"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:103
+#: post-types/CPT_MP_Meal.php:104
 msgid "Meal Categories"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:104
+#: post-types/CPT_MP_Meal.php:105
 msgid "Meal Category"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:105
+#: post-types/CPT_MP_Meal.php:106
 msgid "Search Meal Category"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:106
+#: post-types/CPT_MP_Meal.php:107
 msgid "All Meal Category"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:107
+#: post-types/CPT_MP_Meal.php:108
 msgid "Parent Meal Category"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:108
+#: post-types/CPT_MP_Meal.php:109
 msgid "Parent Meal Category:"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:109
+#: post-types/CPT_MP_Meal.php:110
 msgid "Update Meal Category"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:110
+#: post-types/CPT_MP_Meal.php:111
 msgid "Add New Meal Category"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:111
+#: post-types/CPT_MP_Meal.php:112
 msgid "New Meal Category Name"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:112
+#: post-types/CPT_MP_Meal.php:113
 msgid "Categories"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:161
+#: post-types/CPT_MP_Meal.php:162
 msgid "Normal Price"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:165
+#: post-types/CPT_MP_Meal.php:166
 msgid "Special Price"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:208 templates/cart/cart-content.php:8
+#: post-types/CPT_MP_Meal.php:209 templates/cart/cart-content.php:8
 #: templates/cart/cart-content.php:27
 #: templates/emails/customer-new-order.php:17
 msgid "Quantity"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:210
+#: post-types/CPT_MP_Meal.php:211
 msgid "Unit"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:248 templates/cart/cart-content.php:7
+#: post-types/CPT_MP_Meal.php:250 templates/cart/cart-content.php:7
 #: templates/cart/cart-content.php:26
 #: templates/emails/customer-new-order.php:18
 msgid "Price"
@@ -465,11 +477,11 @@ msgstr ""
 msgid "Your order"
 msgstr ""
 
-#: templates/page-meal-list.php:63
+#: templates/page-meal-list.php:69
 msgid "Prev"
 msgstr ""
 
-#: templates/page-meal-list.php:64
+#: templates/page-meal-list.php:70
 msgid "Next"
 msgstr ""
 
@@ -569,22 +581,22 @@ msgctxt "Order status"
 msgid "Completed"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:56
+#: post-types/CPT_MP_Meal.php:57
 msgctxt "meal"
 msgid "Featured Image"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:57
+#: post-types/CPT_MP_Meal.php:58
 msgctxt "meal"
 msgid "Set featured image"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:58
+#: post-types/CPT_MP_Meal.php:59
 msgctxt "meal"
 msgid "Remove featured image"
 msgstr ""
 
-#: post-types/CPT_MP_Meal.php:59
+#: post-types/CPT_MP_Meal.php:60
 msgctxt "meal"
 msgid "Use as featured image"
 msgstr ""

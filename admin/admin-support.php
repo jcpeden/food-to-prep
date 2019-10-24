@@ -23,9 +23,9 @@ class MTP_Dashboard_Admin_Support
     public function plugin_page(){
         ?>
         <div class="wrap">
-            <h1>Supports</h1>
+            <h1><?php esc_html_e('Supports', 'food-to-prep') ?></h1>
 
-            <p>Technical support for clients is available via plugin <a href="https://wordpress.org/support/plugin/food-to-prep/" target="_blank">forum</a>.</p>
+            <p><?php esc_html_e('Technical support for clients is available via plugin', 'food-to-prep') ?> <a href="https://wordpress.org/support/plugin/food-to-prep/" target="_blank"><?php esc_html_e('forum', 'food-to-prep') ?></a>.</p>
         </div>
         <?php
     }

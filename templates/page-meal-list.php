@@ -5,6 +5,12 @@
  *
  */
 
+add_action('pre_get_posts', 'ftp_modify_query_exclude_category');
+
+function ftp_modify_query_exclude_category(){
+
+}
+
 get_header();
 
 if (is_page(FTP()->endpoint_menu())) {

@@ -7,7 +7,7 @@
  * Author URI:      http://www.tweakdigital.co.uk/
  * Text Domain:     food-to-prep
  * Domain Path:     /languages
- * Version:         0.1.11
+ * Version:         0.1.12
  *
  * @package         Meal_Prep
  */
@@ -350,6 +350,10 @@ add_filter('excerpt_content', function ($content = array('string' => '', 'length
 
 function ftp_prefix_modify_query_order($query)
 {
+    if (!is_admin()){
+        return $query;
+    }
+
     if (is_main_query()) {
 
         /**
@@ -375,14 +379,17 @@ function ftp_prefix_modify_query_order($query)
                 $query->set('orderby', $args);
             }
         }
+
+        $posts_per_page = 0;
+        $posts_per_page = apply_filters('fpt_meal_posts_per_page', $posts_per_page);
+        if ($posts_per_page) {
+            $query->set('posts_per_page', $posts_per_page);
+        } // end if
+
     }
 }
 
 add_action('pre_get_posts', 'ftp_prefix_modify_query_order');
 
-add_action('init', 'ftp_register_param');
-function ftp_register_param()
-{
-    global $wp;
-    $wp->add_query_var('sortby');
-}
+
+

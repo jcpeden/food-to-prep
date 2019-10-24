@@ -55,9 +55,13 @@ Please open a support ticket in the forum and we'll deal with your issue as soon
 
 == Changelog ==
 
+= 0.1.12, October 24, 2019 =
+* Add filter WP_Query fpt_meal_posts_per_page.
+
 = 0.1.11, October 23, 2019 =
 * Update reponsive
 * Add support forum
+* Improved strings
 
 = 0.1.10, October 17, 2019 =
 * Update reponsive
