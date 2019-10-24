@@ -3,7 +3,7 @@
 **Tags:** ecommerce, e-commerce, sell, meal, food, prep, preparation, cuisine, restaurant, store, paypal, checkout, shop  
 **Requires at least:** 4.5  
 **Tested up to:** 5.2.1  
-**Stable tag:** 0.1.10  
+**Stable tag:** 0.1.11  
 **License:** GPLv2 or later  
 **License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -68,6 +68,14 @@ Food To Prep was built by developers and we'll be supporting it's extension as i
 Please open a support ticket in the forum and we'll deal with your issue as soon as possible. We aim to deal with any queries within 24 hours but please be patient if it's a weekend!
 
 ## Changelog ##
+
+### 0.1.12, October 24, 2019 ###
+* Add filter WP_Query fpt_meal_posts_per_page.
+
+### 0.1.11, October 23, 2019 ###
+* Update reponsive
+* Add support forum
+* Improved strings
 
 ### 0.1.10, October 17, 2019 ###
 * Update reponsive

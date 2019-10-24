@@ -22,6 +22,9 @@ if (!class_exists('CPT_MP_Meal')) :
             add_action('init', array($this, 'meal_init'), 0);
             add_action('init', array($this, 'meal_category_inti'), 0);
 
+            add_action('init', array($this, 'ftp_register_param'));
+
+
             add_filter("manage_{$this->post_type}_posts_columns", array($this, 'set_custom_edit_meal_columns'));
 
             add_action("manage_{$this->post_type}_posts_custom_column", array($this, 'custom_meal_column'), 10, 2);
@@ -29,12 +32,10 @@ if (!class_exists('CPT_MP_Meal')) :
             add_action('admin_init', array($this, 'metabox_init'));
             add_action('save_post', array($this, 'save_meal_cpt_meta'));
 
-            add_filter( 'single_template', array($this, 'get_custom_post_type_template') );
-            add_filter( 'taxonomy_template', array($this, 'filter_category_template') );
+            add_filter('single_template', array($this, 'get_custom_post_type_template'));
+            add_filter('taxonomy_template', array($this, 'filter_category_template'));
 
         }
-
-
 
 
         /**
@@ -244,7 +245,8 @@ if (!class_exists('CPT_MP_Meal')) :
          * @param $columns
          * @return mixed
          */
-        function set_custom_edit_meal_columns($columns){
+        function set_custom_edit_meal_columns($columns)
+        {
             $columns['price'] = __('Price', 'food-to-prep');
 
             return $columns;
@@ -269,23 +271,32 @@ if (!class_exists('CPT_MP_Meal')) :
         }
 
 
-        function get_custom_post_type_template( $single_template ) {
+        function get_custom_post_type_template($single_template)
+        {
             global $post;
 
-            if ( $this->post_type === $post->post_type ) {
+            if ($this->post_type === $post->post_type) {
                 $single_template = FoodToPrep::template_patch() . 'single-meal.php';
             }
 
             return $single_template;
         }
 
-        function filter_category_template( $template ) {
+        function filter_category_template($template)
+        {
 
             if (is_tax($this->category)) {
                 $template = FoodToPrep::template_patch() . 'page-meal-list.php';
             }
 
             return $template;
+        }
+
+
+        function ftp_register_param()
+        {
+            global $wp;
+            $wp->add_query_var('sortby');
         }
     }
 

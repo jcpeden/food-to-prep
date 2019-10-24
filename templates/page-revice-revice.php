@@ -1,5 +1,8 @@
 <?php
 
+if (!isset($_GET['orderId']))
+    return false;
+
 $orderId = sanitize_text_field($_GET['orderId']);
 
 $gateways = FTP()->payment_gateways()->get_available_payment_gateways();
